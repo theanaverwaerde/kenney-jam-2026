@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 @export var speed := 5.0
@@ -11,7 +12,8 @@ extends CharacterBody3D
 
 var grabbed_obj: RigidBody3D
 var distance_grabbed: float
-var obj_collision_layer: int
+
+signal release_obj
 
 func _ready() -> void:
 	safe_margin = 0.0001
@@ -86,13 +88,30 @@ func grab() -> void:
 		
 	if grabbed_obj:
 		# Release
-		grabbed_obj.collision_layer = obj_collision_layer
+		grabbed_obj.collision_layer = 1 << 2 # Object Layer
 		grabbed_obj.angular_velocity = Vector3.ZERO
 		grabbed_obj.linear_velocity = Vector3.ZERO
+		release_obj.emit(grabbed_obj)
 		grabbed_obj = null
-	elif raycast.is_colliding():
-		# Grab
-		grabbed_obj = raycast.get_collider()
-		obj_collision_layer = grabbed_obj.collision_layer
-		grabbed_obj.collision_layer = grabbed_layer
-		distance_grabbed = grabbed_obj.global_position.distance_to(global_position)
+		return
+	elif not raycast.is_colliding():
+		return
+		
+	var obj := raycast.get_collider()
+	if obj is Scale:
+		var scale_area = obj
+		# Grab from Scale if have an object
+		obj = obj.take_obj()
+		if not obj:
+			# if no object try a cast without this scale
+			raycast.add_exception(scale_area)
+			raycast.force_raycast_update()
+			raycast.remove_exception(scale_area)
+			if not raycast.is_colliding():
+				return
+			obj = raycast.get_collider()
+	
+	# Grab Object
+	grabbed_obj = obj
+	grabbed_obj.collision_layer = 1 << 3 # Grabbed Layer
+	distance_grabbed = grabbed_obj.global_position.distance_to(global_position)
