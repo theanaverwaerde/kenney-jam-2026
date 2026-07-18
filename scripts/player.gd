@@ -1,23 +1,45 @@
 extends CharacterBody3D
 
-@export var speed = 5.0
+@export var speed := 5.0
 @export var rotation_speed := 12.0
+
+@export var mass := 80
+@export var mass_speed_multiplier := .5
+
+@onready var raycast: RayCast3D = $RayCast3D
+@export_flags_3d_physics var grabbed_layer: int
+
+var grabbed_obj: RigidBody3D
+var distance_grabbed: float
+var obj_collision_layer: int
 
 func _ready() -> void:
 	safe_margin = 0.0001
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	move(delta)
+	
+	grab()
+
+func move(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
+	
 	var direction := (Vector3.FORWARD * input_dir.y + Vector3.LEFT * input_dir.x).normalized()
+	
+	var current_speed: float
+	if grabbed_obj:
+		current_speed = speed * min(1, mass/grabbed_obj.mass*mass_speed_multiplier)
+	else:
+		current_speed = speed
+	
+	# print(current_speed)
+	
 	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+		velocity.x = direction.x * current_speed
+		velocity.z = direction.z * current_speed
 		
 		var target_angle := Vector3.FORWARD.signed_angle_to(direction, Vector3.UP)
 		
@@ -26,9 +48,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 	
-	
 	_push_away_rigid_bodies()
 	move_and_slide()
+	
+	if grabbed_obj != null:
+		var target_grabbed_position = global_position + -basis.z * distance_grabbed
+		target_grabbed_position.y = grabbed_obj.global_position.y
+		
+		grabbed_obj.global_position = target_grabbed_position
 
 # https://gist.github.com/majikayogames/cf013c3091e9a313e322889332eca109
 # CC0/public domain/use for whatever you want no need to credit
@@ -43,8 +70,7 @@ func _push_away_rigid_bodies():
 			# Only count velocity towards push dir, away from character
 			velocity_diff_in_push_dir = max(0., velocity_diff_in_push_dir)
 			# Objects with more mass than us should be harder to push. But doesn't really make sense to push faster than we are going
-			const MY_APPROX_MASS_KG = 80.0
-			var mass_ratio = min(1., MY_APPROX_MASS_KG / c.get_collider().mass)
+			var mass_ratio = min(1., mass / c.get_collider().mass)
 			# Optional add: Don't push object at all if it's 4x heavier or more
 			if mass_ratio < 0.25:
 				continue
@@ -53,3 +79,20 @@ func _push_away_rigid_bodies():
 			# 5.0 is a magic number, adjust to your needs
 			var push_force = mass_ratio * 5.0
 			c.get_collider().apply_force(push_dir * velocity_diff_in_push_dir * push_force, c.get_position() - c.get_collider().global_position)
+
+func grab() -> void:
+	if not Input.is_action_just_pressed("action"):
+		return
+		
+	if grabbed_obj:
+		# Release
+		grabbed_obj.collision_layer = obj_collision_layer
+		grabbed_obj.angular_velocity = Vector3.ZERO
+		grabbed_obj.linear_velocity = Vector3.ZERO
+		grabbed_obj = null
+	elif raycast.is_colliding():
+		# Grab
+		grabbed_obj = raycast.get_collider()
+		obj_collision_layer = grabbed_obj.collision_layer
+		grabbed_obj.collision_layer = grabbed_layer
+		distance_grabbed = grabbed_obj.global_position.distance_to(global_position)
