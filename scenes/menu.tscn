@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://dvi2sd8k4ut1o"]
+
+[ext_resource type="Script" uid="uid://1wtdsal23tak" path="res://scenes/menu.gd" id="1_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://mqgrf1kd6s47" path="res://assets/ui/Menu01-bg.png" id="2_g3eks"]
+[ext_resource type="FontFile" uid="uid://b4cds7mdxe0tr" path="res://assets/fonts/RifficFree-Bold.ttf" id="3_v86rl"]
+[ext_resource type="Texture2D" uid="uid://dxtbypfl40sm8" path="res://assets/ui/Asset_Menu_button_inactive.png" id="4_13sgg"]
+[ext_resource type="Texture2D" uid="uid://cf4m5r28s22ku" path="res://assets/ui/Asset_Menu_button_active.png" id="5_i6lef"]
+[ext_resource type="Texture2D" uid="uid://shcb0xu8lk8b" path="res://assets/ui/Menu03_credits.png" id="6_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cfdemfmluspa6" path="res://assets/ui/Menu04-controls.png" id="7_v86rl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lg67w"]
+texture = ExtResource("2_g3eks")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ny4yj"]
+texture = ExtResource("4_13sgg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hy44"]
+texture = ExtResource("5_i6lef")
+modulate_color = Color(1, 0.18039216, 0.47058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4mlkt"]
+texture = ExtResource("5_i6lef")
+modulate_color = Color(0, 0.81960785, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
+texture = ExtResource("5_i6lef")
+modulate_color = Color(1, 0.18039216, 0.47058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25rsy"]
+texture = ExtResource("6_g3eks")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13sgg"]
+texture = ExtResource("7_v86rl")
+
+[node name="Control" type="Control" unique_id=1406235229]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ytvr")
+
+[node name="Panel" type="Panel" parent="." unique_id=1109430859]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lg67w")
+
+[node name="Play Button" type="Button" parent="." unique_id=2069873690]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.823
+anchor_top = 0.57900006
+anchor_right = 0.823
+anchor_bottom = 0.57900006
+offset_left = -255.09601
+offset_top = -77.19205
+offset_right = -0.0960083
+offset_bottom = -0.19204712
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
+text = "PLAY"
+
+[node name="Controls Button" type="Button" parent="." unique_id=2100040202]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.823
+anchor_top = 0.72400004
+anchor_right = 0.823
+anchor_bottom = 0.72400004
+offset_left = -255.09601
+offset_top = -77.15204
+offset_right = -0.0960083
+offset_bottom = -0.15203857
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
+text = "CONTROLS"
+
+[node name="Credits Button" type="Button" parent="." unique_id=570445045]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.823
+anchor_top = 0.869
+anchor_right = 0.823
+anchor_bottom = 0.869
+offset_left = -255.09601
+offset_top = -77.112
+offset_right = -0.0960083
+offset_bottom = -0.11199951
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
+text = "CREDITS"
+
+[node name="Credits Scene" type="Control" parent="." unique_id=787508290]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Credits Scene" unique_id=1559716589]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.800001
+anchor_bottom = 16.2
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_25rsy")
+
+[node name="Back Button" type="Button" parent="Credits Scene" unique_id=422691697]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.823
+anchor_top = 0.57900006
+anchor_right = 0.823
+anchor_bottom = 0.57900006
+offset_left = 29.079998
+offset_top = 496.84
+offset_right = 284.08
+offset_bottom = 573.84
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
+text = "⮤ BACK"
+
+[node name="Controls Scene" type="Control" parent="." unique_id=1219130575]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Controls Scene" unique_id=202996161]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.800001
+anchor_bottom = 16.2
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_13sgg")
+
+[node name="Back Button" type="Button" parent="Controls Scene" unique_id=1922111072]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.823
+anchor_top = 0.57900006
+anchor_right = 0.823
+anchor_bottom = 0.57900006
+offset_left = 29.079998
+offset_top = 496.84
+offset_right = 284.08
+offset_bottom = 573.84
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_v86rl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
+text = "⮤ BACK"
+
+[connection signal="pressed" from="Play Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Controls Button" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Credits Button" to="." method="on_credits_pressed"]
+[connection signal="pressed" from="Credits Scene/Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Controls Scene/Back Button" to="." method="_on_back_button_pressed"]
