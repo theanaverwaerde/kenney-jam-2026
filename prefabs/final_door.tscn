@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cto78a8ew6esd"]
+
+[ext_resource type="Script" uid="uid://408dcmjuclyb" path="res://scripts/final_door.gd" id="1_fxvhj"]
+[ext_resource type="PackedScene" uid="uid://h8i4xasa4dd1" path="res://assets/models/mini-market/wall-door-rotate.glb" id="2_aermx"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vb667"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u71n4"]
+size = Vector3(20, 4, 2)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_m6kt4"]
+plane = Plane(0, 0, 1, 0)
+
+[node name="FinalDoor" type="Node3D" unique_id=1580684602]
+script = ExtResource("1_fxvhj")
+
+[node name="wall-door-rotate2" parent="." unique_id=211735980 instance=ExtResource("2_aermx")]
+
+[node name="WorldWall" type="StaticBody3D" parent="." unique_id=581642458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldWall" unique_id=620999855]
+shape = SubResource("WorldBoundaryShape3D_vb667")
+
+[node name="WallLeft" type="StaticBody3D" parent="." unique_id=885704776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39999998, 0, 0.29999995)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallLeft" unique_id=1729881983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -1)
+shape = SubResource("BoxShape3D_u71n4")
+disabled = true
+
+[node name="WallRight" type="StaticBody3D" parent="." unique_id=1463526525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0.29999995)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallRight" unique_id=2136018936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -1)
+shape = SubResource("BoxShape3D_u71n4")
+disabled = true
+
+[node name="FinishArea" type="Area3D" parent="." unique_id=1773039268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9802322e-08, 7.6497886e-10, 0.050000004)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FinishArea" unique_id=416069825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+shape = SubResource("WorldBoundaryShape3D_m6kt4")
+disabled = true
+debug_color = Color(0, 0.6, 0, 0.41960785)
+
+[editable path="wall-door-rotate2"]

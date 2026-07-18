@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KenneyJam2026"
-run/main_scene="uid://cy6jcuv6v6tjw"
+run/main_scene="uid://uhts0o85vr4b"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/stretch_mode=4
 boot_splash/image="uid://o45lstfevt71"

@@ -10,6 +10,8 @@ extends CharacterBody3D
 @onready var raycast: RayCast3D = $RayCast3D
 @export_flags_3d_physics var grabbed_layer: int
 
+@onready var animation_player: AnimationPlayer = $"character-employee2/AnimationPlayer"
+
 var grabbed_obj: RigidBody3D
 var distance_grabbed: float
 

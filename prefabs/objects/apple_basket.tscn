@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://41bbtqlcjvkk"]
+
+[ext_resource type="PackedScene" uid="uid://ccdg2vvyque4x" path="res://assets/models/mini-market/display-fruit.glb" id="1_ksho3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vpupw"]
+height = 0.5
+radius = 0.3
+
+[node name="apple-basket" unique_id=36336197 instance=ExtResource("1_ksho3")]
+collision_layer = 4
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=346753856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("CylinderShape3D_vpupw")

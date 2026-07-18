@@ -3,6 +3,8 @@ extends Area3D
 
 var submited_obj: RigidBody3D
 
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+
 signal submit_mass
 
 var lock: bool
@@ -23,7 +25,7 @@ func _on_place(obj: RigidBody3D) -> void:
 	submited_obj.freeze = true
 	submited_obj.collision_layer = 1 << 4
 	
-	submited_obj.global_position = global_position
+	submited_obj.global_position = collision_shape_3d.global_position
 	
 	submit_mass.emit()
 

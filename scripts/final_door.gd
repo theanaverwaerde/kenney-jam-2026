@@ -9,7 +9,7 @@ extends Node3D
 @onready var wall_left: StaticBody3D = $WallLeft
 @onready var wall_right: StaticBody3D = $WallRight
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player: AnimationPlayer = $"wall-door-rotate2/AnimationPlayer"
 
 func _ready() -> void:
 	for s in scales:
@@ -34,7 +34,7 @@ func win() -> void:
 	wall_right.get_node("CollisionShape3D").disabled = false
 	finish_area.get_node("CollisionShape3D").disabled = false
 	
-	animation_player.play("door-opening")
+	animation_player.play("open")
 
 func _finish(_body: Node3D) -> void:
 	get_tree().reload_current_scene()
