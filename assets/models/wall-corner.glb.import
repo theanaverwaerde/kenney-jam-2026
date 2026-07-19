@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcfet8qyi6rs0"
-path="res://.godot/imported/wall.glb-ffd7d0a99d2a14dedd25d4cf19644d71.scn"
+uid="uid://cmyrbgx4jg4se"
+path="res://.godot/imported/wall-corner.glb-9f8c68d86d9a970bbf65d77e25fe6dfd.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/wall.glb"
-dest_files=["res://.godot/imported/wall.glb-ffd7d0a99d2a14dedd25d4cf19644d71.scn"]
+source_file="res://assets/models/wall-corner.glb"
+dest_files=["res://.godot/imported/wall-corner.glb-9f8c68d86d9a970bbf65d77e25fe6dfd.scn"]
 
 [params]
 
@@ -29,8 +29,8 @@ meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
-skins/use_named_skins=true
-animation/import=true
+skins/use_named_skins=false
+animation/import=false
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
@@ -38,8 +38,22 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
 materials/extract_format=0
-materials/extract_path=""
-_subresources={}
+materials/extract_path="res://materials"
+_subresources={
+"materials": {
+"colormap": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/colormap.tres",
+"use_external/path": "uid://cps38c30aoef1"
+}
+},
+"nodes": {
+"PATH:wall-corner": {
+"physics/shape_type": 3,
+"primitive/size": Vector3(0.71, 2, 2)
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

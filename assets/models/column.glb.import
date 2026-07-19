@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bi84l78vprmu6"
-path="res://.godot/imported/shopping-cart.glb-f24e495444e4ce62e7bef837fddbc7d0.scn"
+uid="uid://dbijw6vnaufno"
+path="res://.godot/imported/column.glb-8779b009e68ed568e471d730251c5710.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/shopping-cart.glb"
-dest_files=["res://.godot/imported/shopping-cart.glb-f24e495444e4ce62e7bef837fddbc7d0.scn"]
+source_file="res://assets/models/column.glb"
+dest_files=["res://.godot/imported/column.glb-8779b009e68ed568e471d730251c5710.scn"]
 
 [params]
 
@@ -39,7 +39,16 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:column": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 6.0,
+"primitive/radius": 0.36
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

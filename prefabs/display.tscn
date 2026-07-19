@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b3kektkoipswh"]
+
+[ext_resource type="Script" uid="uid://bkvmv0q4fjubf" path="res://weight_display.gd" id="1_xl8u8"]
+[ext_resource type="PackedScene" uid="uid://b81ung3v6k11r" path="res://assets/models/computer-screen.glb" id="2_2xpm2"]
+[ext_resource type="FontFile" uid="uid://b4cds7mdxe0tr" path="res://assets/fonts/RifficFree-Bold.ttf" id="2_bug2l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6kt4"]
+size = Vector3(1.0380859, 3.6221619, 1.0888672)
+
+[node name="DisplayWeight" type="Node3D" unique_id=222507958]
+script = ExtResource("1_xl8u8")
+
+[node name="computer-screen2" parent="." unique_id=1339361732 instance=ExtResource("2_2xpm2")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Label" type="Label3D" parent="computer-screen2" unique_id=1097785741]
+unique_name_in_owner = true
+transform = Transform3D(1, 8.626791e-09, 8.5973895e-10, -8.626791e-09, 0.9803315, 0.19735797, 8.5973895e-10, -0.19735797, 0.9803315, 5.6237337e-10, 0.43255866, -0.012865603)
+double_sided = false
+text = "- -"
+font = ExtResource("2_bug2l")
+font_size = 54
+outline_size = 26
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=657908926]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1027839433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68211365, 0.31054688)
+shape = SubResource("BoxShape3D_m6kt4")

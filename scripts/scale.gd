@@ -5,7 +5,7 @@ var submited_obj: RigidBody3D
 
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
-signal submit_mass
+signal submit_mass(mass: float)
 
 var lock: bool
 
@@ -27,12 +27,13 @@ func _on_place(obj: RigidBody3D) -> void:
 	
 	submited_obj.global_position = collision_shape_3d.global_position
 	
-	submit_mass.emit()
+	submit_mass.emit(submited_obj.mass)
 
 func take_obj() -> RigidBody3D:
 	if not submited_obj or lock:
 		return null
 	
+	submit_mass.emit(0)
 	var obj = submited_obj
 	submited_obj.freeze = false
 	submited_obj = null;

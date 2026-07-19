@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jsbi1sfqh3d"]
 
 [ext_resource type="Script" uid="uid://b1ubcp7ck17al" path="res://scripts/scale.gd" id="1_mqfc0"]
-[ext_resource type="PackedScene" uid="uid://bi84l78vprmu6" path="res://assets/models/mini-market/shopping-cart.glb" id="2_r241b"]
+[ext_resource type="PackedScene" uid="uid://bi84l78vprmu6" path="res://assets/models/shopping-cart.glb" id="2_r241b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjpwp"]
 size = Vector3(1, 1.4824219, 1)

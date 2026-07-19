@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bi6gj8kixuxls"
-path="res://.godot/imported/shelf-bags.glb-570a1bee5ad0de4eab062bd5d3d1cc1d.scn"
+uid="uid://h8i4xasa4dd1"
+path="res://.godot/imported/wall-door-rotate.glb-b95d7e34c3c19b7c061ef1ac342f42ed.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/shelf-bags.glb"
-dest_files=["res://.godot/imported/shelf-bags.glb-570a1bee5ad0de4eab062bd5d3d1cc1d.scn"]
+source_file="res://assets/models/wall-door-rotate.glb"
+dest_files=["res://.godot/imported/wall-door-rotate.glb-b95d7e34c3c19b7c061ef1ac342f42ed.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dsenxsbbxnjnc"
-path="res://.godot/imported/wall-window.glb-fb4b3872255a963c695224291c43390d.scn"
+uid="uid://b81ung3v6k11r"
+path="res://.godot/imported/computer-screen.glb-6db2f569d29ff6cccbe6f0934e4cee5a.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/wall-window.glb"
-dest_files=["res://.godot/imported/wall-window.glb-fb4b3872255a963c695224291c43390d.scn"]
+source_file="res://assets/models/computer-screen.glb"
+dest_files=["res://.godot/imported/computer-screen.glb-6db2f569d29ff6cccbe6f0934e4cee5a.scn"]
 
 [params]
 

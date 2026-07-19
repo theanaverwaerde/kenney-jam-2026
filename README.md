@@ -8,6 +8,7 @@ Assets used:
 	- [Mini Market](https://kenney.nl/assets/mini-market)
 	- [UI Pack](https://kenney.nl/assets/ui-pack)
 	- [Input Prompts](https://kenney.nl/assets/input-prompts)
+	- [Space Station Kit](https://kenney.nl/assets/space-station-kit)
 
 Fonts used:
 	- [Riffic](https://www.dafont.com/riffic.font)

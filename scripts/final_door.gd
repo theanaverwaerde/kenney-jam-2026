@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 	finish_area.body_entered.connect(_finish)
 
-func _on_submit_mass() -> void:
+func _on_submit_mass(_mass: float) -> void:
 	var mass: float = 0
 	
 	for s in scales:

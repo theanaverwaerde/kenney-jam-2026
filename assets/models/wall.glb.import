@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h8i4xasa4dd1"
-path="res://.godot/imported/wall-door-rotate.glb-8988e53695184c744b1c0ab4ea1262ff.scn"
+uid="uid://bcfet8qyi6rs0"
+path="res://.godot/imported/wall.glb-c6b76fb446034e2b3f0aa6c8a7a3ecdb.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/wall-door-rotate.glb"
-dest_files=["res://.godot/imported/wall-door-rotate.glb-8988e53695184c744b1c0ab4ea1262ff.scn"]
+source_file="res://assets/models/wall.glb"
+dest_files=["res://.godot/imported/wall.glb-c6b76fb446034e2b3f0aa6c8a7a3ecdb.scn"]
 
 [params]
 

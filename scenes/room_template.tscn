@@ -3,11 +3,12 @@
 [ext_resource type="Environment" uid="uid://3jm6f83wnxkw" path="res://environment.tres" id="1_3k0wu"]
 [ext_resource type="Script" uid="uid://b468rlf5tq3fs" path="res://scripts/room_config.gd" id="1_jtutx"]
 [ext_resource type="PackedScene" uid="uid://cnojos203txe7" path="res://prefabs/player.tscn" id="2_kxjkn"]
-[ext_resource type="PackedScene" uid="uid://cmyrbgx4jg4se" path="res://assets/models/mini-market/wall-corner.glb" id="3_erp5q"]
-[ext_resource type="PackedScene" uid="uid://bcfet8qyi6rs0" path="res://assets/models/mini-market/wall.glb" id="4_8tq5h"]
+[ext_resource type="PackedScene" uid="uid://cmyrbgx4jg4se" path="res://assets/models/wall-corner.glb" id="3_erp5q"]
+[ext_resource type="PackedScene" uid="uid://bcfet8qyi6rs0" path="res://assets/models/wall.glb" id="4_8tq5h"]
 [ext_resource type="PackedScene" uid="uid://cto78a8ew6esd" path="res://prefabs/final_door.tscn" id="5_7iym2"]
 [ext_resource type="PackedScene" uid="uid://jsbi1sfqh3d" path="res://prefabs/scale.tscn" id="6_bhtnt"]
-[ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/mini-market/column.glb" id="10_qre4e"]
+[ext_resource type="PackedScene" uid="uid://b3kektkoipswh" path="res://prefabs/display.tscn" id="9_bk54u"]
+[ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/column.glb" id="10_qre4e"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_els8b"]
 
@@ -97,10 +98,19 @@ size = 6.98
 
 [node name="FinalDoor" parent="." unique_id=1580684602 node_paths=PackedStringArray("scales") instance=ExtResource("5_7iym2")]
 transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 0, 0, 4)
-scales = [NodePath("../ScaleLeft"), NodePath("../ScaleRight")]
+scales = [NodePath("../ScaleRight"), NodePath("../ScaleLeft")]
 
-[node name="ScaleLeft" parent="." unique_id=1222534552 instance=ExtResource("6_bhtnt")]
+[node name="ScaleLeft" parent="." unique_id=93567059 instance=ExtResource("6_bhtnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3)
+
+[node name="DisplayLeft" parent="." unique_id=222507958 instance=ExtResource("9_bk54u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.2)
+
+[node name="ScaleRight" parent="." unique_id=1222534552 instance=ExtResource("6_bhtnt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 3)
 
-[node name="ScaleRight" parent="." unique_id=93567059 instance=ExtResource("6_bhtnt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3)
+[node name="DisplayRight" parent="." unique_id=1523989566 instance=ExtResource("9_bk54u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3.2)
+
+[connection signal="submit_mass" from="ScaleLeft" to="DisplayLeft" method="_on_submit_mass"]
+[connection signal="submit_mass" from="ScaleRight" to="DisplayRight" method="_on_submit_mass"]

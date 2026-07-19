@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dg87mnn34cbdj"
-path="res://.godot/imported/display-bread.glb-31930568311082b46200e719ea70c55c.scn"
+uid="uid://bi6gj8kixuxls"
+path="res://.godot/imported/shelf-bags.glb-e1cd5649d2df4cfe7ede070858e76092.scn"
 
 [deps]
 
-source_file="res://assets/models/mini-market/display-bread.glb"
-dest_files=["res://.godot/imported/display-bread.glb-31930568311082b46200e719ea70c55c.scn"]
+source_file="res://assets/models/shelf-bags.glb"
+dest_files=["res://.godot/imported/shelf-bags.glb-e1cd5649d2df4cfe7ede070858e76092.scn"]
 
 [params]
 
