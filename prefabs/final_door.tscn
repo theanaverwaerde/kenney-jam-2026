@@ -58,6 +58,6 @@ debug_color = Color(0, 0.6, 0, 0.41960785)
 
 [node name="PowerUp9" type="AudioStreamPlayer" parent="." unique_id=655056498]
 stream = ExtResource("4_5rj7g")
-volume_db = -10.0
+volume_db = -20.0
 
 [editable path="wall-door-rotate2"]
