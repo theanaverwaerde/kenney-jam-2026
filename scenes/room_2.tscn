@@ -2,8 +2,95 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_586c8"]
 [ext_resource type="PackedScene" uid="uid://dueimubvawqr2" path="res://scenes/room_3.tscn" id="2_w0ydv"]
+[ext_resource type="PackedScene" uid="uid://clc4advvbprfs" path="res://assets/models/egg.glb" id="3_4et86"]
+[ext_resource type="PackedScene" uid="uid://boi7wk0mgv2qr" path="res://assets/models/apple.glb" id="4_ktm03"]
+[ext_resource type="PackedScene" uid="uid://dopx2bb0yttbl" path="res://assets/models/burger.glb" id="5_lsxps"]
+[ext_resource type="PackedScene" uid="uid://bvblttnqlmdfq" path="res://assets/models/carrot.glb" id="6_63qte"]
+[ext_resource type="PackedScene" uid="uid://b672x74r3irkw" path="res://assets/models/honey.glb" id="7_flmds"]
+[ext_resource type="PackedScene" uid="uid://bsusnl5qmjclo" path="res://assets/models/pepper.glb" id="8_hbe2o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lg67w"]
+radius = 0.06201172
+height = 0.18701172
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lg67w"]
+radius = 0.11608292
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lg67w"]
+height = 0.3154297
+radius = 0.19873047
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4mlkt"]
+radius = 0.07373047
+height = 0.7060547
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4mlkt"]
+height = 0.3203125
+radius = 0.17773438
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_25rsy"]
+radius = 0.064453125
+height = 0.44335938
 
 [node name="Node" type="Node" unique_id=144643641]
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_586c8")]
 next_scene = ExtResource("2_w0ydv")
+
+[node name="egg" parent="." unique_id=588350752 instance=ExtResource("3_4et86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2060442, 0.5783267, 0.33271623)
+collision_layer = 4
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="egg" unique_id=1371433984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08174917, 0)
+shape = SubResource("CapsuleShape3D_lg67w")
+
+[node name="apple" parent="." unique_id=525039790 instance=ExtResource("4_ktm03")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2530239, 0.6495836, -0.109383464)
+collision_layer = 4
+collision_mask = 15
+mass = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="apple" unique_id=245136101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08243373, 0)
+shape = SubResource("SphereShape3D_lg67w")
+
+[node name="burger2" parent="." unique_id=1103753178 instance=ExtResource("5_lsxps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4122205, 1.237668, 1.2815425)
+collision_layer = 4
+collision_mask = 15
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="burger2" unique_id=1281404645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13778204, 0)
+shape = SubResource("CylinderShape3D_lg67w")
+
+[node name="carrot2" parent="." unique_id=1570610925 instance=ExtResource("6_63qte")]
+transform = Transform3D(-0.94198316, -0.004494801, -0.33563018, -0.15197916, 0.89725524, 0.41453025, 0.2992828, 0.4414892, -0.8458823, -2.9787667, 0.023907602, -2.5774698)
+collision_layer = 4
+collision_mask = 15
+mass = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="carrot2" unique_id=1224445450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32149142, 0)
+shape = SubResource("CapsuleShape3D_4mlkt")
+
+[node name="honey2" parent="." unique_id=169208189 instance=ExtResource("7_flmds")]
+transform = Transform3D(-0.5076253, 0, 0.861578, 0, 1, 0, -0.861578, 0, -0.5076253, -3.3401632, 2.192931, 1.7209654)
+collision_layer = 4
+collision_mask = 15
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="honey2" unique_id=2014156625]
+transform = Transform3D(0.23067412, 0, 0.9730313, 0, 1, 0, -0.9730313, 0, 0.23067412, 0, 0.1531741, 0)
+shape = SubResource("CylinderShape3D_4mlkt")
+
+[node name="pepper2" parent="." unique_id=1541059244 instance=ExtResource("8_hbe2o")]
+transform = Transform3D(0.0021158003, 0, 0.99999774, 0, 1, 0, -0.99999774, 0, 0.0021158003, 1.8962244, 1.1657679, -3.6993005)
+collision_layer = 4
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pepper2" unique_id=536989591]
+transform = Transform3D(0.9952437, -0.0975634, -0.002105703, -0.0021158005, -4.3711843e-08, -0.9999978, 0.09756297, 0.9952482, -0.00020646438, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_25rsy")
