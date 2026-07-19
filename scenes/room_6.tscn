@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cf4u7eu50ujws"]
+[gd_scene format=3 uid="uid://c5iewalxbix0w"]
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_ct5gj"]
-[ext_resource type="PackedScene" uid="uid://c5iewalxbix0w" path="res://scenes/room_7.tscn" id="2_ohrev"]
+[ext_resource type="PackedScene" uid="uid://b3rovvi5k8dwg" path="res://scenes/end1.tscn" id="2_ohrev"]
 
 [node name="Node" type="Node" unique_id=144643641]
 
