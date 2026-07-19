@@ -7,6 +7,70 @@
 radius = 0.19335938
 height = 0.6586914
 
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_4dohe"]
+filter_enabled = true
+filters = ["character-employee/Skeleton3D:arm-left", "character-employee/Skeleton3D:arm-right"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ht1c8"]
+animation = &"holding-both"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4dohe"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_r66lb"]
+filter_enabled = true
+filters = ["character-employee/Skeleton3D:arm-right"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1txc5"]
+animation = &"interact-left"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ht1c8"]
+fadeout_time = 0.15
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g2jcq"]
+animation = &"interact-right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r66lb"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_1txc5"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_ht1c8"]
+xfade_time = 0.2
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "walk"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vb667"]
+graph_offset = Vector2(-154.17456, 193.25278)
+nodes/output/position = Vector2(1148.6874, 532.14056)
+nodes/state/node = SubResource("AnimationNodeTransition_ht1c8")
+nodes/state/position = Vector2(302.515, 291.3561)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_4dohe")
+nodes/Idle/position = Vector2(-177.48499, 161.35612)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_r66lb")
+nodes/Walk/position = Vector2(-217.48497, 411.3561)
+nodes/WalkSpeed/node = SubResource("AnimationNodeTimeScale_1txc5")
+nodes/WalkSpeed/position = Vector2(-17.484991, 381.35614)
+nodes/InteractOS/node = SubResource("AnimationNodeOneShot_ht1c8")
+nodes/InteractOS/position = Vector2(960, 520)
+nodes/InteractLeft/node = SubResource("AnimationNodeAnimation_1txc5")
+nodes/InteractLeft/position = Vector2(440, 760)
+nodes/InteractRight/node = SubResource("AnimationNodeAnimation_g2jcq")
+nodes/InteractRight/position = Vector2(440, 970)
+nodes/InteractBlend/node = SubResource("AnimationNodeBlend2_r66lb")
+nodes/InteractBlend/position = Vector2(700, 810)
+nodes/Holding/node = SubResource("AnimationNodeBlend2_4dohe")
+nodes/Holding/position = Vector2(610, 380)
+nodes/HoldingAnim/node = SubResource("AnimationNodeAnimation_ht1c8")
+nodes/HoldingAnim/position = Vector2(320, 560)
+node_connections = [&"output", 0, &"InteractOS", &"state", 0, &"Idle", &"state", 1, &"WalkSpeed", &"WalkSpeed", 0, &"Walk", &"InteractOS", 0, &"Holding", &"InteractOS", 1, &"InteractBlend", &"InteractBlend", 0, &"InteractLeft", &"InteractBlend", 1, &"InteractRight", &"Holding", 0, &"state", &"Holding", 1, &"HoldingAnim"]
+
 [node name="Player" type="CharacterBody3D" unique_id=618756913]
 collision_layer = 2
 collision_mask = 23
@@ -29,8 +93,24 @@ collide_with_areas = true
 [node name="character-employee2" parent="." unique_id=1475560683 instance=ExtResource("2_4dohe")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Skeleton3D" parent="character-employee2/character-employee" parent_id_path=PackedInt32Array(1475560683, 124284771) index="0" unique_id=426981827]
-bones/4/rotation = Quaternion(0, 0, -0.38268346, 0.9238795)
-bones/5/rotation = Quaternion(0, 0, 0.3826835, 0.92387956)
+[node name="Skeleton3D" parent="character-employee2/character-employee" parent_id_path=PackedInt32Array(1475560683, 1220639626) index="0" unique_id=2142889286]
+bones/3/rotation = Quaternion(-0.040107716, 0, 0, 0.9991954)
+bones/4/rotation = Quaternion(0, 0, -0.26898944, 0.9631431)
+bones/5/rotation = Quaternion(0, 0, 0.26898944, 0.9631431)
+bones/6/rotation = Quaternion(0, 0.040107716, 0, 0.9991954)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=318179094]
+root_node = NodePath("../character-employee2")
+tree_root = SubResource("AnimationNodeBlendTree_vb667")
+anim_player = NodePath("../character-employee2/AnimationPlayer")
+parameters/state/current_state = "idle"
+parameters/state/transition_request = ""
+parameters/state/current_index = 0
+parameters/WalkSpeed/scale = 1.0
+parameters/InteractOS/active = false
+parameters/InteractOS/internal_active = false
+parameters/InteractOS/request = 0
+parameters/InteractBlend/blend_amount = 1.0
+parameters/Holding/blend_amount = 0.0
 
 [editable path="character-employee2"]

@@ -9,7 +9,7 @@ extends CharacterBody3D
 
 @onready var raycast: RayCast3D = $RayCast3D
 
-@onready var animation_player: AnimationPlayer = $"character-employee2/AnimationPlayer"
+@onready var animation_tree: AnimationTree = $AnimationTree
 
 var grabbed_obj: RigidBody3D
 var distance_grabbed: float
@@ -117,10 +117,28 @@ func grab() -> void:
 	# Grab Object
 	grabbed_obj = obj
 	grabbed_obj.collision_layer = 1 << 3 # Grabbed Layer
-	distance_grabbed = grabbed_obj.global_position.distance_to(global_position)
+	var posA = grabbed_obj.global_position
+	var posB = global_position
+	posA.y = 0
+	posB.y = 0
+	distance_grabbed = posA.distance_to(posB)
+	
+	animation_tree.set("parameters/InteractOS/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 func anim_handle() -> void:
+	var state: String
 	if velocity:
-		animation_player.play("walk")
+		state = "walk"
+		animation_tree.set("parameters/WalkSpeed/scale", velocity.length() / speed)
 	else:
-		animation_player.play("idle")
+		state = "idle"
+	
+	var holding: float
+	if grabbed_obj:
+		holding = 1
+	else:
+		holding = 0
+	
+	animation_tree.set("parameters/Holding/blend_amount", holding)
+	
+	animation_tree.set("parameters/state/transition_request", state)
