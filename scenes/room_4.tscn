@@ -2,8 +2,120 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_f3snk"]
 [ext_resource type="PackedScene" uid="uid://bd2bp53owwrs2" path="res://scenes/room_5.tscn" id="2_dbpl5"]
+[ext_resource type="PackedScene" uid="uid://bgxeykk50lgd3" path="res://assets/models/vehicles/cars/kart-oopi.glb" id="3_ccapj"]
+[ext_resource type="PackedScene" uid="uid://cd5s3w4dkdj55" path="res://assets/models/vehicles/cars/tractor.glb" id="4_5d4n5"]
+[ext_resource type="PackedScene" uid="uid://cp8c46vxj8x62" path="res://assets/models/vehicles/cars/police.glb" id="5_6eqho"]
+[ext_resource type="PackedScene" uid="uid://dih3gftpm2bcv" path="res://assets/models/vehicles/cars/train-locomotive-b.glb" id="6_o8owr"]
+[ext_resource type="PackedScene" uid="uid://cpqfepb1ttya8" path="res://assets/models/vehicles/watercraft/boat-house-c.glb" id="7_1sfdy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lg67w"]
+size = Vector3(0.6533203, 0.5341797, 0.45117188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5d4n5"]
+size = Vector3(0.8133545, 0.9786072, 1.3451233)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4mlkt"]
+size = Vector3(0.43066406, 0.3923645, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1sfdy"]
+size = Vector3(1.3007813, 1.7197266, 2.6152344)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_25rsy"]
+size = Vector3(1.6734619, 1.8183136, 3.1122742)
 
 [node name="Node" type="Node" unique_id=144643641]
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_f3snk")]
 next_scene = ExtResource("2_dbpl5")
+
+[node name="kart-oopi2" parent="." unique_id=713688678 instance=ExtResource("3_ccapj")]
+transform = Transform3D(-0.84829634, -0.06028621, 0.5260788, 0.23530518, 0.84709996, 0.4765008, -0.47436783, 0.5280028, -0.7044062, -3.8331666, 3.2630422, -3.1131382)
+collision_layer = 4
+collision_mask = 15
+mass = 25.0
+
+[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1521850322]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.263, -0.055)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kart-oopi2" unique_id=625985096]
+transform = Transform3D(0.025066275, 0, -0.99967873, 0, 1, 0, 0.99967873, 0, 0.025066275, 0, 0, 0)
+shape = SubResource("BoxShape3D_lg67w")
+
+[node name="tractor" parent="." unique_id=1688323217 instance=ExtResource("4_5d4n5")]
+transform = Transform3D(0.84586185, 0, -0.533402, 0, 1, 0, 0.533402, 0, 0.84586185, -2.56138, 2.476368, 0.73461914)
+collision_layer = 4
+collision_mask = 15
+mass = 150.0
+
+[node name="wheel-front-right" parent="tractor" index="0" unique_id=194340569]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.16018414, -0.3029548, 0.3918115)
+
+[node name="wheel-front-left" parent="tractor" index="1" unique_id=2135090367]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.16018414, -0.3029548, 0.3918115)
+
+[node name="wheel-back-right" parent="tractor" index="2" unique_id=1082574859]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.15669203, -0.1826126, -0.39251256)
+
+[node name="wheel-back-left" parent="tractor" index="3" unique_id=1995588416]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.15669203, -0.1826126, -0.39251256)
+
+[node name="body" parent="tractor" index="4" unique_id=1700450634]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0, -0.38564557, 0.018757045)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tractor" unique_id=1007878395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003, 0, 0)
+shape = SubResource("BoxShape3D_5d4n5")
+
+[node name="police" parent="." unique_id=1183923895 instance=ExtResource("5_6eqho")]
+transform = Transform3D(0.52585846, 0.65307117, 0.5449503, -0.45348555, 0.7572965, -0.46994978, -0.71959966, 0, 0.69438916, -0.05286497, 6.473835, 0.11226463)
+collision_layer = 4
+collision_mask = 15
+mass = 25.0
+
+[node name="wheel-back-left" parent="police" index="0" unique_id=385929249]
+transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0.09035395, -0.11549878, -0.25326884)
+
+[node name="wheel-front-left" parent="police" index="1" unique_id=1207378723]
+transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0.09035395, -0.11549878, 0.24635291)
+
+[node name="wheel-back-right" parent="police" index="2" unique_id=887987872]
+transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, -0.09035395, -0.11549878, -0.25326884)
+
+[node name="body" parent="police" index="3" unique_id=1099612686]
+transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0, -0.14621514, -0.011168167)
+
+[node name="wheel-front-right" parent="police" index="4" unique_id=1448871330]
+transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, -0.09035395, -0.11549878, 0.24635291)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="police" unique_id=186401070]
+shape = SubResource("BoxShape3D_4mlkt")
+
+[node name="train-locomotive-b2" parent="." unique_id=223574685 instance=ExtResource("6_o8owr")]
+transform = Transform3D(-0.43275017, 0, 0.9015139, 0, 1, 0, -0.9015139, 0, -0.43275017, 2.321002, 3.6528816, -3.222865)
+collision_layer = 4
+collision_mask = 15
+mass = 237.0
+
+[node name="train-locomotive-b" parent="train-locomotive-b2" index="0" unique_id=681473529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.822, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="train-locomotive-b2" unique_id=225476344]
+shape = SubResource("BoxShape3D_1sfdy")
+
+[node name="boat-house-c2" parent="." unique_id=2439473 instance=ExtResource("7_1sfdy")]
+transform = Transform3D(0.69966966, 0, -0.7144665, 0, 1, 0, 0.7144665, 0, 0.69966966, 3.6775131, 1.2789917, 1.2876587)
+collision_layer = 4
+collision_mask = 15
+mass = 274.0
+
+[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1966275097]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.885, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="boat-house-c2" unique_id=940724306]
+shape = SubResource("BoxShape3D_25rsy")
+
+[editable path="kart-oopi2"]
+[editable path="tractor"]
+[editable path="police"]
+[editable path="train-locomotive-b2"]
+[editable path="boat-house-c2"]
