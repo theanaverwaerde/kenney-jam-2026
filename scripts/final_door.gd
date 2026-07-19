@@ -10,6 +10,9 @@ extends Node3D
 
 @onready var animation_player: AnimationPlayer = $"wall-door-rotate2/AnimationPlayer"
 
+@onready var open_003: AudioStreamPlayer = $Open003
+@onready var power_up_9: AudioStreamPlayer = $PowerUp9
+
 func _ready() -> void:
 	for s in scales:
 		s.submit_mass.connect(_on_submit_mass)
@@ -44,6 +47,8 @@ func win() -> void:
 	finish_area.get_node("CollisionShape3D").disabled = false
 	
 	animation_player.play("open")
+	
+	power_up_9.play(.14)
 
 func _finish(_body: Node3D) -> void:
 	var config: RoomConfig = owner

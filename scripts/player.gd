@@ -12,6 +12,11 @@ extends CharacterBody3D
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 
+@onready var footstep: AudioStreamPlayer = $Footstep
+
+const time_footstep = .3
+var current_time_footstep = 0
+
 var grabbed_obj: RigidBody3D
 var distance_grabbed: float
 
@@ -22,6 +27,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	move(delta)
+	
+	sound(delta)
 	
 	grab()
 	
@@ -85,6 +92,16 @@ func _push_away_rigid_bodies():
 			# 5.0 is a magic number, adjust to your needs
 			var push_force = mass_ratio * 5.0
 			c.get_collider().apply_force(push_dir * velocity_diff_in_push_dir * push_force, c.get_position() - c.get_collider().global_position)
+
+func sound(delta: float) -> void:
+	if not velocity:
+		current_time_footstep = 0
+		return
+
+	current_time_footstep -= velocity.length() / speed  * delta
+	if current_time_footstep <= 0:
+		current_time_footstep = time_footstep
+		footstep.play()
 
 func grab() -> void:
 	if not Input.is_action_just_pressed("action"):

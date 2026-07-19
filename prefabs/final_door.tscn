@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://408dcmjuclyb" path="res://scripts/final_door.gd" id="1_fxvhj"]
 [ext_resource type="PackedScene" uid="uid://h8i4xasa4dd1" path="res://assets/models/minimarket/wall-door-rotate.glb" id="2_aermx"]
+[ext_resource type="AudioStream" uid="uid://c18j75slt1i02" path="res://assets/audios/powerUp9.ogg" id="4_5rj7g"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vb667"]
 plane = Plane(0, 0, 1, 0)
@@ -17,10 +18,10 @@ script = ExtResource("1_fxvhj")
 
 [node name="wall-door-rotate2" parent="." unique_id=211735980 instance=ExtResource("2_aermx")]
 
-[node name="door-left" parent="wall-door-rotate2/wall-door-rotate" parent_id_path=PackedInt32Array(211735980, 2102337778) index="1" unique_id=1176542654]
+[node name="door-left" parent="wall-door-rotate2/wall-door-rotate" parent_id_path=PackedInt32Array(211735980, 88986092) index="1" unique_id=410920226]
 transform = Transform3D(1, 0, -3.4878686e-16, 0, 1, 0, 3.4878686e-16, 0, 1, -0.4, 7.6497886e-10, 0.1)
 
-[node name="door-right" parent="wall-door-rotate2/wall-door-rotate" parent_id_path=PackedInt32Array(211735980, 2102337778) index="2" unique_id=545864559]
+[node name="door-right" parent="wall-door-rotate2/wall-door-rotate" parent_id_path=PackedInt32Array(211735980, 88986092) index="2" unique_id=1185116391]
 transform = Transform3D(1, 0, 3.4878686e-16, 0, 1, 0, -3.4878686e-16, 0, 1, 0.4, 7.6497886e-10, 0.1)
 
 [node name="WorldWall" type="StaticBody3D" parent="." unique_id=581642458]
@@ -54,5 +55,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 shape = SubResource("WorldBoundaryShape3D_m6kt4")
 disabled = true
 debug_color = Color(0, 0.6, 0, 0.41960785)
+
+[node name="PowerUp9" type="AudioStreamPlayer" parent="." unique_id=655056498]
+stream = ExtResource("4_5rj7g")
+volume_db = -10.0
 
 [editable path="wall-door-rotate2"]

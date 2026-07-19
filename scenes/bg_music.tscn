@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bhf1iwbdvplbu"]
+
+[ext_resource type="AudioStream" uid="uid://bdp41qrch11lk" path="res://assets/audios/sinneschlosen-sinnesloschen-beam-117362.mp3" id="1_f6gl3"]
+
+[node name="BgMusic" type="Node" unique_id=1118448472]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1535962899]
+stream = ExtResource("1_f6gl3")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true

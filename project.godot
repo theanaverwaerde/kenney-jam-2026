@@ -17,6 +17,10 @@ boot_splash/stretch_mode=4
 boot_splash/image="uid://o45lstfevt71"
 config/icon="res://icon.svg"
 
+[autoload]
+
+BgMusic="*uid://bhf1iwbdvplbu"
+
 [display]
 
 window/size/resizable=false

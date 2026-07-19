@@ -9,10 +9,14 @@ Assets used:
 - [UI Pack](https://kenney.nl/assets/ui-pack)
 - [Input Prompts](https://kenney.nl/assets/input-prompts)
 - [Space Station Kit](https://kenney.nl/assets/space-station-kit)
+- [Digital Audio](https://kenney.nl/assets/digital-audio)
+- [Impact Sounds](https://kenney.nl/assets/impact-sounds)
 
 Fonts used:
 - [Riffic](https://www.dafont.com/riffic.font)
 - [Super Joyful](https://www.dafont.com/super-joyful.font)
 - [Supersonic Rocketship](https://www.dafont.com/supersonic-rocketship.font)
+
+Background music [sinneslöschen - beam](https://pixabay.com/music/video-games-sinneslöschen-beam-117362/)
 
 Author images made with [Picrew](https://picrew.me/en/image_maker/644129)
