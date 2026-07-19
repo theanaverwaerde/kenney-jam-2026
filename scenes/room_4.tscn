@@ -108,7 +108,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 274.0
 
-[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1966275097]
+[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1624620845]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.885, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="boat-house-c2" unique_id=940724306]

@@ -2,8 +2,315 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_ct5gj"]
 [ext_resource type="PackedScene" uid="uid://b3rovvi5k8dwg" path="res://scenes/end1.tscn" id="2_ohrev"]
+[ext_resource type="PackedScene" uid="uid://d0fmfxvvtxnax" path="res://assets/models/animals/animal-fox.glb" id="3_mqkto"]
+[ext_resource type="PackedScene" uid="uid://bv2ti1iq672cs" path="res://assets/models/animals/animal-chick.glb" id="4_t7grj"]
+[ext_resource type="PackedScene" uid="uid://b7j8klirxd31t" path="res://assets/models/animals/animal-elephant.glb" id="5_fmcxs"]
+[ext_resource type="PackedScene" uid="uid://cova7yx2ug0tr" path="res://assets/models/animals/animal-koala.glb" id="6_13u40"]
+[ext_resource type="PackedScene" uid="uid://ih1asrvdouqn" path="res://assets/models/animals/animal-dog.glb" id="7_52whc"]
+[ext_resource type="PackedScene" uid="uid://bgxeykk50lgd3" path="res://assets/models/vehicles/cars/kart-oopi.glb" id="8_2bh1o"]
+[ext_resource type="PackedScene" uid="uid://cd5s3w4dkdj55" path="res://assets/models/vehicles/cars/tractor.glb" id="9_7a0gm"]
+[ext_resource type="PackedScene" uid="uid://cpqfepb1ttya8" path="res://assets/models/vehicles/watercraft/boat-house-c.glb" id="10_dh7gl"]
+[ext_resource type="PackedScene" uid="uid://dtbmafqgv1l6t" path="res://assets/models/food/banana.glb" id="11_13u40"]
+[ext_resource type="PackedScene" uid="uid://c4pt38e7auoj3" path="res://assets/models/food/pear.glb" id="12_52whc"]
+[ext_resource type="PackedScene" uid="uid://boi7wk0mgv2qr" path="res://assets/models/food/apple.glb" id="13_2bh1o"]
+[ext_resource type="PackedScene" uid="uid://clc4advvbprfs" path="res://assets/models/food/egg.glb" id="14_bkd6m"]
+[ext_resource type="PackedScene" uid="uid://dopx2bb0yttbl" path="res://assets/models/food/burger.glb" id="15_3hqbg"]
+[ext_resource type="PackedScene" uid="uid://bvblttnqlmdfq" path="res://assets/models/food/carrot.glb" id="16_86qtk"]
+[ext_resource type="PackedScene" uid="uid://b672x74r3irkw" path="res://assets/models/food/honey.glb" id="17_4lhtg"]
+[ext_resource type="PackedScene" uid="uid://41bbtqlcjvkk" path="res://prefabs/objects/apple_basket.tscn" id="18_tvs3o"]
+[ext_resource type="PackedScene" uid="uid://ddi840qy0dqhx" path="res://prefabs/objects/bread.tscn" id="19_7oif5"]
+[ext_resource type="PackedScene" uid="uid://ctel6vinta4fw" path="res://prefabs/objects/box.tscn" id="20_sqgdh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2utt"]
+size = Vector3(0.76171875, 0.5871277, 0.5664787)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_otfk3"]
+size = Vector3(1, 2.1850586, 2.8898926)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkd6m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hqbg"]
+size = Vector3(0.42382813, 0.5078125, 0.49438477)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86qtk"]
+size = Vector3(0.6533203, 0.5341797, 0.45117188)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lhtg"]
+size = Vector3(0.8133545, 0.9786072, 1.3451233)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvs3o"]
+size = Vector3(1.6734619, 1.8183136, 3.1122742)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7a0gm"]
+radius = 0.339
+height = 2.086914
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dh7gl"]
+radius = 0.26107982
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d2utt"]
+radius = 0.5099506
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gch6v"]
+radius = 0.119628906
+height = 0.296875
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hy2dt"]
+radius = 0.11608292
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cgxwa"]
+height = 0.3154297
+radius = 0.19873047
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eh7mk"]
+radius = 0.07373047
+height = 0.7060547
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c6te0"]
+height = 0.3203125
+radius = 0.17773438
 
 [node name="Node" type="Node" unique_id=144643641]
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_ct5gj")]
 next_scene = ExtResource("2_ohrev")
+
+[node name="animal-fox2" parent="." unique_id=1733254123 instance=ExtResource("3_mqkto")]
+transform = Transform3D(-0.6653991, 0, -0.7464879, -0.40492374, 0.8400956, 0.36093804, 0.6271212, 0.54243845, -0.5589988, -3.35019, 12.005642, 2.2735815)
+collision_layer = 4
+collision_mask = 15
+mass = 12.0
+
+[node name="animal-fox" parent="animal-fox2" index="0" unique_id=2055341553]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.255, 0.07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-fox2" unique_id=1130241007]
+shape = SubResource("BoxShape3D_d2utt")
+
+[node name="animal-chick2" parent="." unique_id=1366910740 instance=ExtResource("4_t7grj")]
+transform = Transform3D(0.38058317, 0, 0.9247467, -0.74187917, 0.59698653, 0.3053233, -0.5520613, -0.8022512, 0.22720303, -1.0453508, 1.3495431, -1.7285404)
+collision_layer = 4
+collision_mask = 15
+mass = 3.0
+
+[node name="animal-chick" parent="animal-chick2" index="0" unique_id=804460225]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="root" parent="animal-chick2/animal-chick" index="0" unique_id=1100679343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7807355, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2" unique_id=1326965288]
+transform = Transform3D(0.2, 6.938894e-17, -3.7252903e-09, 0, 0.2, 3.7252903e-09, 3.7252903e-09, -3.7252903e-09, 0.2, 0, 0, 0)
+shape = SubResource("BoxShape3D_otfk3")
+
+[node name="animal-elephant2" parent="animal-chick2" unique_id=1654911538 instance=ExtResource("5_fmcxs")]
+transform = Transform3D(-0.6298529, -0.7418792, 0.23000178, -0.46424565, 0.5969867, 0.65428096, -0.6227051, 0.30532327, -0.720428, -1.8311138, 0.3198204, 5.2699423)
+collision_layer = 4
+collision_mask = 15
+mass = 167.0
+
+[node name="animal-elephant" parent="animal-chick2/animal-elephant2" index="0" unique_id=1814870451]
+transform = Transform3D(0.9944878, -0.10477592, -0.003910899, 0.10477592, 0.9917127, 0.074343845, -0.003911078, -0.074343845, 0.9972248, -0.13080812, -0.71632385, -0.19121909)
+
+[node name="root" parent="animal-chick2/animal-elephant2/animal-elephant" index="0" unique_id=7444885]
+transform = Transform3D(1, 1.3995134e-09, -2.9802322e-08, 4.916714e-09, 1, 8.69278e-10, -2.9802322e-08, 7.525081e-09, 1, 0.062274456, -0.009891987, 0.04418683)
+
+[node name="body" parent="animal-chick2/animal-elephant2/animal-elephant/root" index="0" unique_id=1498942500]
+transform = Transform3D(0.9824088, 0.17322516, 0.069756456, -0.17364816, 0.9848077, -4.656613e-10, -0.0686967, -0.01211308, 0.9975641, 1.573182e-08, 0.18124998, -3.8083503e-08)
+
+[node name="tail" parent="animal-chick2/animal-elephant2/animal-elephant/root/body" index="0" unique_id=584018568]
+transform = Transform3D(0.9396926, -0.34202015, 0, 0.34202015, 0.9396926, 0, 0, 0, 1, 0, 0.46311063, 0.625)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2/animal-elephant2" unique_id=1598977891]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_bkd6m")
+
+[node name="animal-koala2" parent="." unique_id=708105075 instance=ExtResource("6_13u40")]
+transform = Transform3D(-0.564557, -2.9802322e-08, 0.82539445, -1.4901161e-08, 1.0000002, 0, -0.8253944, -9.685755e-08, -0.5645572, -3.7349393, 2.723, -3.4658628)
+collision_layer = 4
+collision_mask = 15
+mass = 11.0
+
+[node name="root" parent="animal-koala2/animal-koala" parent_id_path=PackedInt32Array(708105075, 162761457) index="0" unique_id=208015988]
+transform = Transform3D(0.4, 0, 0, -1.7763565e-16, 0.4, 1.7763568e-15, 0, 4.440892e-16, 0.4, 0, -0.2885299, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="animal-koala2" unique_id=1718885653]
+transform = Transform3D(1, 0, 0, -4.440891e-16, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_d2utt")
+
+[node name="animal-dog2" parent="." unique_id=1142120 instance=ExtResource("7_52whc")]
+transform = Transform3D(-0.559313, 0, -0.82895654, 0, 1, 0, 0.82895654, 0, -0.559313, 4.5573435, 1.4272435, -3.8088534)
+collision_layer = 4
+collision_mask = 15
+mass = 13.0
+
+[node name="root" parent="animal-dog2/animal-dog" parent_id_path=PackedInt32Array(1142120, 972164320) index="0" unique_id=2101311164]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.2637998, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-dog2" unique_id=1094795571]
+shape = SubResource("BoxShape3D_3hqbg")
+
+[node name="kart-oopi2" parent="." unique_id=713688678 instance=ExtResource("8_2bh1o")]
+transform = Transform3D(-0.84829634, -0.06028621, 0.5260788, 0.23530518, 0.84709996, 0.4765008, -0.47436783, 0.5280028, -0.7044062, -3.8331666, 3.2630422, -3.1131382)
+collision_layer = 4
+collision_mask = 15
+mass = 25.0
+
+[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1521850322]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.263, -0.055)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kart-oopi2" unique_id=1001657995]
+transform = Transform3D(0.025066275, 0, -0.99967873, 0, 1, 0, 0.99967873, 0, 0.025066275, 0, 0, 0)
+shape = SubResource("BoxShape3D_86qtk")
+
+[node name="tractor" parent="." unique_id=1688323217 instance=ExtResource("9_7a0gm")]
+transform = Transform3D(0.84586185, 0, -0.533402, 0, 1, 0, 0.533402, 0, 0.84586185, -2.56138, 2.476368, 0.73461914)
+collision_layer = 4
+collision_mask = 15
+mass = 150.0
+
+[node name="wheel-front-right" parent="tractor" index="0" unique_id=194340569]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.16018414, -0.3029548, 0.3918115)
+
+[node name="wheel-front-left" parent="tractor" index="1" unique_id=2135090367]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.16018414, -0.3029548, 0.3918115)
+
+[node name="wheel-back-right" parent="tractor" index="2" unique_id=1082574859]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.15669203, -0.1826126, -0.39251256)
+
+[node name="wheel-back-left" parent="tractor" index="3" unique_id=1995588416]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.15669203, -0.1826126, -0.39251256)
+
+[node name="body" parent="tractor" index="4" unique_id=1700450634]
+transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0, -0.38564557, 0.018757045)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tractor" unique_id=687380132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003, 0, 0)
+shape = SubResource("BoxShape3D_4lhtg")
+
+[node name="boat-house-c2" parent="." unique_id=258062841 instance=ExtResource("10_dh7gl")]
+transform = Transform3D(0.69966966, 0, -0.7144665, 0, 1, 0, 0.7144665, 0, 0.69966966, 0.3743887, 13.244196, -0.34433317)
+collision_layer = 4
+collision_mask = 15
+mass = 274.0
+
+[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1624620845]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.885, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="boat-house-c2" unique_id=944850221]
+shape = SubResource("BoxShape3D_tvs3o")
+
+[node name="banana2" parent="." unique_id=1227306709 instance=ExtResource("11_13u40")]
+transform = Transform3D(-0.036802888, 0.6542927, -0.75534534, 0.50183, 0.6657423, 0.55222625, 0.86418295, -0.35873145, -0.35284495, 3.62389, 3.568469, -3.78819)
+collision_layer = 4
+collision_mask = 15
+mass = 80.0
+
+[node name="banana" parent="banana2" index="0" unique_id=1970774476]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.1175871e-08, -0.36905771, -2.7939677e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="banana2" unique_id=633119019]
+transform = Transform3D(0.99763167, 0.04866615, -0.048608243, -0.04866582, -1.5646219e-07, -0.99881506, -0.048607796, 0.9988145, 0.0023682863, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_7a0gm")
+
+[node name="pear2" parent="." unique_id=1988699410 instance=ExtResource("12_52whc")]
+transform = Transform3D(0.9111451, -0.23558038, -0.33810732, 0, 0.820478, -0.57167804, 0.41208577, 0.52088165, 0.7475745, -4.5272923, 0.4126837, -3.4254282)
+collision_layer = 4
+collision_mask = 15
+mass = 18.0
+
+[node name="pear" parent="pear2" index="0" unique_id=510166235]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.7252903e-09, -0.24922517, 7.450581e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pear2" unique_id=660323761]
+shape = SubResource("SphereShape3D_dh7gl")
+
+[node name="apple" parent="." unique_id=586540567 instance=ExtResource("13_2bh1o")]
+transform = Transform3D(-0.70633125, 0.40468007, 0.58080137, -6.2088155e-08, 0.8204782, -0.5716778, -0.70788145, -0.40379393, -0.57952935, 2.9295087, 1.914287, -1.5539529)
+collision_layer = 4
+collision_mask = 15
+mass = 150.0
+
+[node name="apple" parent="apple" index="0" unique_id=913063834]
+transform = Transform3D(4.8, 0, 0, 0, 4.8, 0, 0, 0, 4.8, 1.3411046e-08, -0.42457932, -6.705523e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="apple" unique_id=1176630042]
+shape = SubResource("SphereShape3D_d2utt")
+
+[node name="egg" parent="." unique_id=1991473640 instance=ExtResource("14_bkd6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3237772, 0.5783267, 2.1421854)
+collision_layer = 4
+collision_mask = 15
+
+[node name="egg" parent="egg" index="0" unique_id=2063477669]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.12081277, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="egg" unique_id=269129786]
+shape = SubResource("CapsuleShape3D_gch6v")
+
+[node name="apple2" parent="." unique_id=1794447039 instance=ExtResource("13_2bh1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2530239, 0.6495836, -0.109383464)
+collision_layer = 4
+collision_mask = 15
+mass = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="apple2" unique_id=1895707921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08243373, 0)
+shape = SubResource("SphereShape3D_hy2dt")
+
+[node name="burger2" parent="." unique_id=1775009307 instance=ExtResource("15_3hqbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4122205, 1.237668, 1.2815425)
+collision_layer = 4
+collision_mask = 15
+mass = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="burger2" unique_id=535055524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13778204, 0)
+shape = SubResource("CylinderShape3D_cgxwa")
+
+[node name="carrot2" parent="." unique_id=56127291 instance=ExtResource("16_86qtk")]
+transform = Transform3D(-0.94198316, -0.004494801, -0.33563018, -0.15197916, 0.89725524, 0.41453025, 0.2992828, 0.4414892, -0.8458823, -2.9787667, 0.023907602, -2.5774698)
+collision_layer = 4
+collision_mask = 15
+mass = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="carrot2" unique_id=192201977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32149142, 0)
+shape = SubResource("CapsuleShape3D_eh7mk")
+
+[node name="honey2" parent="." unique_id=1141905710 instance=ExtResource("17_4lhtg")]
+transform = Transform3D(-0.5076253, 0, 0.861578, 0, 1, 0, -0.861578, 0, -0.5076253, 2.6979551, 2.192931, -0.46219778)
+collision_layer = 4
+collision_mask = 15
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="honey2" unique_id=1995177010]
+transform = Transform3D(0.23067412, 0, 0.9730313, 0, 1, 0, -0.9730313, 0, 0.23067412, 0, 0.1531741, 0)
+shape = SubResource("CylinderShape3D_c6te0")
+
+[node name="apple-basket" parent="." unique_id=36336197 instance=ExtResource("18_tvs3o")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.16875075, 2.3841858e-07, -2.0267427)
+mass = 100.0
+
+[node name="bread" parent="." unique_id=18490647 instance=ExtResource("19_7oif5")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.7499677, 0, 1.2003003)
+mass = 20.0
+
+[node name="box" parent="." unique_id=326272294 instance=ExtResource("20_sqgdh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1144035, 0, -0.76605725)
+collision_layer = 4
+collision_mask = 15
+mass = 10.0
+
+[editable path="animal-fox2"]
+[editable path="animal-chick2"]
+[editable path="animal-chick2/animal-elephant2"]
+[editable path="animal-koala2"]
+[editable path="animal-dog2"]
+[editable path="kart-oopi2"]
+[editable path="tractor"]
+[editable path="boat-house-c2"]
+[editable path="banana2"]
+[editable path="pear2"]
+[editable path="apple"]
+[editable path="egg"]
