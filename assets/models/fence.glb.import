@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgctm3ijf4wcb"
-path="res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"
+uid="uid://bmwjupdh70pmo"
+path="res://.godot/imported/fence.glb-797e835e7ffc8bbdaf188afcf7920135.scn"
 
 [deps]
 
-source_file="res://assets/models/shelf-boxes.glb"
-dest_files=["res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"]
+source_file="res://assets/models/fence.glb"
+dest_files=["res://.godot/imported/fence.glb-797e835e7ffc8bbdaf188afcf7920135.scn"]
 
 [params]
 
@@ -39,15 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:shelf-boxes": {
-"generate/physics": true,
-"physics/shape_type": 3,
-"primitive/size": Vector3(1, 3, 1)
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

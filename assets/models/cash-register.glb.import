@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgctm3ijf4wcb"
-path="res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"
+uid="uid://cmuh01rt2wd68"
+path="res://.godot/imported/cash-register.glb-8d9469763970e694c7d4ee460e011456.scn"
 
 [deps]
 
-source_file="res://assets/models/shelf-boxes.glb"
-dest_files=["res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"]
+source_file="res://assets/models/cash-register.glb"
+dest_files=["res://.godot/imported/cash-register.glb-8d9469763970e694c7d4ee460e011456.scn"]
 
 [params]
 
@@ -41,10 +41,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:shelf-boxes": {
+"PATH:cash-register": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/size": Vector3(1, 3, 1)
+"primitive/size": Vector3(1, 4, 1)
 }
 }
 }

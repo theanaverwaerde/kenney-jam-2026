@@ -44,8 +44,8 @@ _subresources={
 "PATH:shelf-end": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(0, 0, -0.205),
-"primitive/size": Vector3(0.79, 4.015, 0.405)
+"primitive/position": Vector3(0, 0, -0.25),
+"primitive/size": Vector3(1, 4, 0.5)
 }
 }
 }
