@@ -1,7 +1,6 @@
 extends Node3D
 
 @export var scales: Array[Scale]
-@export var wanted_mass: float
 
 @onready var finish_area: Area3D = $FinishArea
 
@@ -18,9 +17,19 @@ func _ready() -> void:
 	finish_area.body_entered.connect(_finish)
 
 func _on_submit_mass() -> void:
+	var mass: float = 0
+	
 	for s in scales:
-		if not s.submited_obj or s.submited_obj.mass != wanted_mass:
+		if not s.submited_obj:
 			return
+		
+		if mass == 0:
+			mass = s.submited_obj.mass
+		elif mass != s.submited_obj.mass:
+			return
+	
+	if mass == 0:
+		return
 	
 	win()
 
@@ -37,4 +46,6 @@ func win() -> void:
 	animation_player.play("open")
 
 func _finish(_body: Node3D) -> void:
-	get_tree().reload_current_scene()
+	var config: RoomConfig = owner
+	
+	get_tree().change_scene_to_packed(config.next_scene)

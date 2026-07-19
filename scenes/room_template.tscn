@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://irs5lrps0ovi"]
+
+[ext_resource type="Environment" uid="uid://3jm6f83wnxkw" path="res://environment.tres" id="1_3k0wu"]
+[ext_resource type="Script" uid="uid://b468rlf5tq3fs" path="res://scripts/room_config.gd" id="1_jtutx"]
+[ext_resource type="PackedScene" uid="uid://cnojos203txe7" path="res://prefabs/player.tscn" id="2_kxjkn"]
+[ext_resource type="PackedScene" uid="uid://cmyrbgx4jg4se" path="res://assets/models/mini-market/wall-corner.glb" id="3_erp5q"]
+[ext_resource type="PackedScene" uid="uid://bcfet8qyi6rs0" path="res://assets/models/mini-market/wall.glb" id="4_8tq5h"]
+[ext_resource type="PackedScene" uid="uid://cto78a8ew6esd" path="res://prefabs/final_door.tscn" id="5_7iym2"]
+[ext_resource type="PackedScene" uid="uid://jsbi1sfqh3d" path="res://prefabs/scale.tscn" id="6_bhtnt"]
+[ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/mini-market/column.glb" id="10_qre4e"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_els8b"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_m6kt4"]
+plane = Plane(-1, 0, 0, 0)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ca8fo"]
+plane = Plane(1, 0, 0, 0)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1vjjy"]
+plane = Plane(0, 0, 1, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m6kt4"]
+size = Vector2(12, 9)
+
+[node name="RoomBase" type="Node" unique_id=1522547058]
+script = ExtResource("1_jtutx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=573975876]
+environment = ExtResource("1_3k0wu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1997675826]
+transform = Transform3D(0.7365941, 0.65847456, 0.15440352, 0.3210557, -0.5413597, 0.77707976, 0.595275, -0.5228201, -0.61016935, 0.018311486, 5.605518, 0.123957664)
+shadow_enabled = true
+shadow_opacity = 0.9
+
+[node name="Player" parent="." unique_id=618756913 instance=ExtResource("2_kxjkn")]
+unique_name_in_owner = true
+
+[node name="Floor&Walls" type="Node" parent="." unique_id=416589119]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor&Walls" unique_id=1439895461]
+
+[node name="CollisionFloor" type="CollisionShape3D" parent="Floor&Walls/StaticBody3D" unique_id=1753315046]
+shape = SubResource("WorldBoundaryShape3D_els8b")
+
+[node name="CollisionLeft" type="CollisionShape3D" parent="Floor&Walls/StaticBody3D" unique_id=784374807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7000003, 0, -4.499999)
+shape = SubResource("WorldBoundaryShape3D_m6kt4")
+
+[node name="CollisionRight" type="CollisionShape3D" parent="Floor&Walls/StaticBody3D" unique_id=1581729535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7000003, 0, -4.500001)
+shape = SubResource("WorldBoundaryShape3D_ca8fo")
+
+[node name="CollisionVoid" type="CollisionShape3D" parent="Floor&Walls/StaticBody3D" unique_id=1944573522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.5)
+shape = SubResource("WorldBoundaryShape3D_1vjjy")
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor&Walls" unique_id=1400809679]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+mesh = SubResource("PlaneMesh_m6kt4")
+
+[node name="wall-corner2" parent="Floor&Walls" unique_id=1316531001 instance=ExtResource("3_erp5q")]
+transform = Transform3D(-5.9604645e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -5.9604645e-08, 6, 0, 4.000001)
+
+[node name="wall2" parent="Floor&Walls" unique_id=1125180704 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-2.8284273, 0, -0.7071067, 0, 1, 0, 2.8284268, 0, -0.7071068, 5.600674, -2.9878626, 1.556173)
+
+[node name="wall-corner3" parent="Floor&Walls" unique_id=464977872 instance=ExtResource("3_erp5q")]
+transform = Transform3D(-1, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, -1, -6, 0, 3.999999)
+
+[node name="wall3" parent="Floor&Walls" unique_id=1127056511 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-2.828427, 0, 0.70710677, 0, 1, 0, -2.828427, 0, -0.70710677, -3.911678, -2.9878623, 1.6871784)
+
+[node name="wall6" parent="Floor&Walls" unique_id=550186782 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-3.496911e-07, 0, 1, 0, 1, 0, -8, 0, -4.371139e-08, -6, 0, -0.50000083)
+
+[node name="wall7" parent="Floor&Walls" unique_id=1832648329 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-3.496911e-07, 0, -1, 0, 1, 0, 8, 0, -4.371139e-08, 6, 0, -0.49999905)
+
+[node name="wall4" parent="Floor&Walls" unique_id=1006679071 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-5, 0, 1.509958e-07, 0, 1, 0, -7.54979e-07, 0, -1, -3, 0, 4)
+
+[node name="wall5" parent="Floor&Walls" unique_id=1393593681 instance=ExtResource("4_8tq5h")]
+transform = Transform3D(-5, 0, 1.509958e-07, 0, 1, 0, -7.54979e-07, 0, -1, 3, 0, 4)
+
+[node name="column2" parent="Floor&Walls" unique_id=316361459 instance=ExtResource("10_qre4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="column3" parent="Floor&Walls" unique_id=1336396777 instance=ExtResource("10_qre4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -2)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1856530910]
+transform = Transform3D(-1, 2.5190014e-08, -5.4020163e-08, 0, 0.9063078, 0.42261824, 5.960465e-08, 0.42261824, -0.9063078, -1.1779798e-06, 10.72519, -19.76322)
+fov = 20.0
+size = 6.98
+
+[node name="FinalDoor" parent="." unique_id=1580684602 node_paths=PackedStringArray("scales") instance=ExtResource("5_7iym2")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 0, 0, 4)
+scales = [NodePath("../ScaleLeft"), NodePath("../ScaleRight")]
+
+[node name="ScaleLeft" parent="." unique_id=1222534552 instance=ExtResource("6_bhtnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 3)
+
+[node name="ScaleRight" parent="." unique_id=93567059 instance=ExtResource("6_bhtnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3)

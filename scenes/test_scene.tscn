@@ -79,7 +79,7 @@ shadow_enabled = true
 shadow_opacity = 0.9
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1272752681]
-transform = Transform3D(-1, 4.016067e-08, -7.765219e-08, 0, 0.8882375, 0.45938453, 8.742278e-08, 0.45938453, -0.8882375, 4.7683716e-07, 5.554371, -8.086781)
+transform = Transform3D(-0.9099614, 0.242856, -0.33614162, 0, 0.8105796, 0.5856285, 0.4146929, 0.5328993, -0.73759615, -1.8698496, 5.554371, -7.236475)
 size = 11.089
 
 [node name="Player" parent="." unique_id=618756913 instance=ExtResource("2_qjeyg")]
