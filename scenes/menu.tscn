@@ -160,7 +160,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
-text = "⮤ BACK"
+text = "< BACK"
 
 [node name="Controls Scene" type="Control" parent="." unique_id=1219130575]
 visible = false
@@ -197,7 +197,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ny4yj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4hy44")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4mlkt")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_l48gv")
-text = "⮤ BACK"
+text = "< BACK"
 
 [connection signal="pressed" from="Play Button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Controls Button" to="." method="_on_controls_pressed"]
