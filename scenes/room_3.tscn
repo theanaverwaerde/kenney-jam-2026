@@ -42,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08174917, 0)
 shape = SubResource("CapsuleShape3D_bg4i0")
 
 [node name="banana2" parent="RoomBase" unique_id=1033875212 instance=ExtResource("4_bg4i0")]
-transform = Transform3D(-0.110408925, 1.9628783, -2.2660358, 1.5054898, 1.9972272, 1.6566789, 2.5925486, -1.076194, -1.0585351, 3.62389, 3.568469, 2.1616564)
+transform = Transform3D(-0.110408925, 1.9628783, -2.2660358, 1.5054898, 1.9972272, 1.6566789, 2.5925486, -1.076194, -1.0585351, 3.62389, 3.568469, -3.78819)
 collision_layer = 4
 collision_mask = 15
 mass = 80.0
@@ -52,7 +52,7 @@ transform = Transform3D(0.99763167, 0.048666213, -0.04860797, -0.048665635, -4.3
 shape = SubResource("CapsuleShape3D_lg67w")
 
 [node name="pear2" parent="RoomBase" unique_id=1683768581 instance=ExtResource("5_6w2ej")]
-transform = Transform3D(1.8222901, -0.47116083, -0.67621464, 0, 1.640956, -1.1433562, 0.82417154, 1.0417633, 1.4951489, 4.1109676, 0.4126837, 0.37278527)
+transform = Transform3D(1.8222901, -0.47116083, -0.67621464, 0, 1.640956, -1.1433562, 0.82417154, 1.0417633, 1.4951489, -4.5272923, 0.4126837, -3.4254282)
 collision_layer = 4
 collision_mask = 15
 mass = 18.0
@@ -62,7 +62,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.123288095, 0)
 shape = SubResource("SphereShape3D_6w2ej")
 
 [node name="burger2" parent="RoomBase" unique_id=1103753178 instance=ExtResource("6_yvqia")]
-transform = Transform3D(0.54668707, -0.14134826, -0.2028644, 0, 0.49228683, -0.34300688, 0.24725147, 0.312529, 0.44854468, -3.2952156, 0.97838295, 1.4558623)
+transform = Transform3D(0.54668707, -0.14134826, -0.2028644, 0, 0.49228683, -0.34300688, 0.24725147, 0.312529, 0.44854468, -0.6054585, 0.97838295, -2.4350915)
 collision_layer = 4
 collision_mask = 15
 mass = 2.0

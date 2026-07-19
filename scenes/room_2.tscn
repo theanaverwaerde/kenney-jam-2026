@@ -38,7 +38,7 @@ height = 0.44335938
 next_scene = ExtResource("2_w0ydv")
 
 [node name="egg" parent="." unique_id=588350752 instance=ExtResource("3_4et86")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2060442, 0.5783267, 0.33271623)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.3237772, 0.5783267, 2.1421854)
 collision_layer = 4
 collision_mask = 15
 
@@ -77,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32149142, 0)
 shape = SubResource("CapsuleShape3D_4mlkt")
 
 [node name="honey2" parent="." unique_id=169208189 instance=ExtResource("7_flmds")]
-transform = Transform3D(-0.5076253, 0, 0.861578, 0, 1, 0, -0.861578, 0, -0.5076253, -3.3401632, 2.192931, 1.7209654)
+transform = Transform3D(-0.5076253, 0, 0.861578, 0, 1, 0, -0.861578, 0, -0.5076253, 2.6979551, 2.192931, -0.46219778)
 collision_layer = 4
 collision_mask = 15
 mass = 20.0
@@ -87,7 +87,7 @@ transform = Transform3D(0.23067412, 0, 0.9730313, 0, 1, 0, -0.9730313, 0, 0.2306
 shape = SubResource("CylinderShape3D_4mlkt")
 
 [node name="pepper2" parent="." unique_id=1541059244 instance=ExtResource("8_hbe2o")]
-transform = Transform3D(0.0021158003, 0, 0.99999774, 0, 1, 0, -0.99999774, 0, 0.0021158003, 1.8962244, 1.1657679, -3.6993005)
+transform = Transform3D(0.0031737005, 0, 1.4999967, 0, 1.5, 0, -1.4999967, 0, 0.0031737005, 1.8962244, 1.1657679, -3.6993005)
 collision_layer = 4
 collision_mask = 15
 
