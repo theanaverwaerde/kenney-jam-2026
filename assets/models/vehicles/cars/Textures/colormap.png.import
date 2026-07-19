@@ -3,28 +3,27 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chowyy73urcm1"
-path.s3tc="res://.godot/imported/colormap.png-402cbca79624f9eb1518bd87be56315c.s3tc.ctex"
+path="res://.godot/imported/colormap.png-402cbca79624f9eb1518bd87be56315c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/models/vehicles/cars/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-402cbca79624f9eb1518bd87be56315c.s3tc.ctex"]
+dest_files=["res://.godot/imported/colormap.png-402cbca79624f9eb1518bd87be56315c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.6
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

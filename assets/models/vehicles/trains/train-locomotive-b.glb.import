@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dih3gftpm2bcv"
-path="res://.godot/imported/train-locomotive-b.glb-e0adbfbec8c1d0f527126216a8ae6814.scn"
+path="res://.godot/imported/train-locomotive-b.glb-685c2b5e621bda1065afc9eb93b7b090.scn"
 
 [deps]
 
-source_file="res://assets/models/vehicles/cars/train-locomotive-b.glb"
-dest_files=["res://.godot/imported/train-locomotive-b.glb-e0adbfbec8c1d0f527126216a8ae6814.scn"]
+source_file="res://assets/models/vehicles/trains/train-locomotive-b.glb"
+dest_files=["res://.godot/imported/train-locomotive-b.glb-685c2b5e621bda1065afc9eb93b7b090.scn"]
 
 [params]
 

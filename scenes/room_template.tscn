@@ -29,7 +29,11 @@ plane = Plane(1, 0, 0, 0)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1vjjy"]
 plane = Plane(0, 0, 1, 0)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r241b"]
+albedo_color = Color(0.49803922, 0.5176471, 0.6117647, 1)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6kt4"]
+material = SubResource("StandardMaterial3D_r241b")
 size = Vector2(12, 9)
 
 [node name="RoomBase" type="Node" unique_id=1522547058]

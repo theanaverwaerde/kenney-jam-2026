@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bgxeykk50lgd3" path="res://assets/models/vehicles/cars/kart-oopi.glb" id="3_ccapj"]
 [ext_resource type="PackedScene" uid="uid://cd5s3w4dkdj55" path="res://assets/models/vehicles/cars/tractor.glb" id="4_5d4n5"]
 [ext_resource type="PackedScene" uid="uid://cp8c46vxj8x62" path="res://assets/models/vehicles/cars/police.glb" id="5_6eqho"]
-[ext_resource type="PackedScene" uid="uid://dih3gftpm2bcv" path="res://assets/models/vehicles/cars/train-locomotive-b.glb" id="6_o8owr"]
+[ext_resource type="PackedScene" uid="uid://dih3gftpm2bcv" path="res://assets/models/vehicles/trains/train-locomotive-b.glb" id="6_o8owr"]
 [ext_resource type="PackedScene" uid="uid://cpqfepb1ttya8" path="res://assets/models/vehicles/watercraft/boat-house-c.glb" id="7_1sfdy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lg67w"]
@@ -34,7 +34,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 25.0
 
-[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1521850322]
+[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1556325954]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.263, -0.055)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="kart-oopi2" unique_id=625985096]
@@ -47,19 +47,19 @@ collision_layer = 4
 collision_mask = 15
 mass = 150.0
 
-[node name="wheel-front-right" parent="tractor" index="0" unique_id=194340569]
+[node name="wheel-front-right" parent="tractor" index="0" unique_id=697993070]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.16018414, -0.3029548, 0.3918115)
 
-[node name="wheel-front-left" parent="tractor" index="1" unique_id=2135090367]
+[node name="wheel-front-left" parent="tractor" index="1" unique_id=2038422066]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.16018414, -0.3029548, 0.3918115)
 
-[node name="wheel-back-right" parent="tractor" index="2" unique_id=1082574859]
+[node name="wheel-back-right" parent="tractor" index="2" unique_id=1508775357]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.15669203, -0.1826126, -0.39251256)
 
-[node name="wheel-back-left" parent="tractor" index="3" unique_id=1995588416]
+[node name="wheel-back-left" parent="tractor" index="3" unique_id=417465777]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.15669203, -0.1826126, -0.39251256)
 
-[node name="body" parent="tractor" index="4" unique_id=1700450634]
+[node name="body" parent="tractor" index="4" unique_id=855957356]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0, -0.38564557, 0.018757045)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tractor" unique_id=1007878395]
@@ -72,19 +72,19 @@ collision_layer = 4
 collision_mask = 15
 mass = 25.0
 
-[node name="wheel-back-left" parent="police" index="0" unique_id=385929249]
+[node name="wheel-back-left" parent="police" index="0" unique_id=1105057069]
 transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0.09035395, -0.11549878, -0.25326884)
 
-[node name="wheel-front-left" parent="police" index="1" unique_id=1207378723]
+[node name="wheel-front-left" parent="police" index="1" unique_id=1065806107]
 transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0.09035395, -0.11549878, 0.24635291)
 
-[node name="wheel-back-right" parent="police" index="2" unique_id=887987872]
+[node name="wheel-back-right" parent="police" index="2" unique_id=1155977311]
 transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, -0.09035395, -0.11549878, -0.25326884)
 
-[node name="body" parent="police" index="3" unique_id=1099612686]
+[node name="body" parent="police" index="3" unique_id=972044754]
 transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, 0, -0.14621514, -0.011168167)
 
-[node name="wheel-front-right" parent="police" index="4" unique_id=1448871330]
+[node name="wheel-front-right" parent="police" index="4" unique_id=1974589427]
 transform = Transform3D(0.30117983, 0, 0, 0, 0.30716348, 0, 0, 0, 0.3084085, -0.09035395, -0.11549878, 0.24635291)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="police" unique_id=186401070]
@@ -96,7 +96,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 237.0
 
-[node name="train-locomotive-b" parent="train-locomotive-b2" index="0" unique_id=681473529]
+[node name="train-locomotive-b" parent="train-locomotive-b2" index="0" unique_id=978341940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.822, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="train-locomotive-b2" unique_id=225476344]
@@ -108,7 +108,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 274.0
 
-[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1624620845]
+[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1137439514]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.885, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="boat-house-c2" unique_id=940724306]
