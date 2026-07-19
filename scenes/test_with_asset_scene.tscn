@@ -2,14 +2,14 @@
 
 [ext_resource type="Environment" uid="uid://3jm6f83wnxkw" path="res://environment.tres" id="1_gmiqw"]
 [ext_resource type="PackedScene" uid="uid://cnojos203txe7" path="res://prefabs/player.tscn" id="2_1vjjy"]
-[ext_resource type="PackedScene" uid="uid://cmyrbgx4jg4se" path="res://assets/models/wall-corner.glb" id="2_my5ka"]
-[ext_resource type="PackedScene" uid="uid://bcfet8qyi6rs0" path="res://assets/models/wall.glb" id="3_1vjjy"]
+[ext_resource type="PackedScene" uid="uid://cmyrbgx4jg4se" path="res://assets/models/minimarket/wall-corner.glb" id="2_my5ka"]
+[ext_resource type="PackedScene" uid="uid://bcfet8qyi6rs0" path="res://assets/models/minimarket/wall.glb" id="3_1vjjy"]
 [ext_resource type="PackedScene" uid="uid://cto78a8ew6esd" path="res://prefabs/final_door.tscn" id="5_aqqlt"]
 [ext_resource type="PackedScene" uid="uid://jsbi1sfqh3d" path="res://prefabs/scale.tscn" id="6_aqqlt"]
 [ext_resource type="PackedScene" uid="uid://41bbtqlcjvkk" path="res://prefabs/objects/apple_basket.tscn" id="7_esvgn"]
 [ext_resource type="PackedScene" uid="uid://cdjm33l862uix" path="res://prefabs/objects/bag.tscn" id="8_b4a5u"]
 [ext_resource type="PackedScene" uid="uid://ddi840qy0dqhx" path="res://prefabs/objects/bread.tscn" id="9_6wlp6"]
-[ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/column.glb" id="10_b4a5u"]
+[ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/minimarket/column.glb" id="10_b4a5u"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_els8b"]
 

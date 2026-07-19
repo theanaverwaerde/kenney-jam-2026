@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bcfet8qyi6rs0"
-path="res://.godot/imported/wall.glb-c6b76fb446034e2b3f0aa6c8a7a3ecdb.scn"
+uid="uid://clc4advvbprfs"
+path="res://.godot/imported/egg.glb-43e171c32827b54d26f6c6a50ae51970.scn"
 
 [deps]
 
-source_file="res://assets/models/wall.glb"
-dest_files=["res://.godot/imported/wall.glb-c6b76fb446034e2b3f0aa6c8a7a3ecdb.scn"]
+source_file="res://assets/models/food/egg.glb"
+dest_files=["res://.godot/imported/egg.glb-43e171c32827b54d26f6c6a50ae51970.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false

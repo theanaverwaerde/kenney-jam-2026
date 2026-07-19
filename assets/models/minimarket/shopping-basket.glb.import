@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://h8i4xasa4dd1"
-path="res://.godot/imported/wall-door-rotate.glb-b95d7e34c3c19b7c061ef1ac342f42ed.scn"
+uid="uid://byckxkdorpbmn"
+path="res://.godot/imported/shopping-basket.glb-e71a35650238e316cdb6d14d0f2ef1d5.scn"
 
 [deps]
 
-source_file="res://assets/models/wall-door-rotate.glb"
-dest_files=["res://.godot/imported/wall-door-rotate.glb-b95d7e34c3c19b7c061ef1ac342f42ed.scn"]
+source_file="res://assets/models/minimarket/shopping-basket.glb"
+dest_files=["res://.godot/imported/shopping-basket.glb-e71a35650238e316cdb6d14d0f2ef1d5.scn"]
 
 [params]
 

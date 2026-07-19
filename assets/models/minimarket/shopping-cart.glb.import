@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmwjupdh70pmo"
-path="res://.godot/imported/fence.glb-797e835e7ffc8bbdaf188afcf7920135.scn"
+uid="uid://bi84l78vprmu6"
+path="res://.godot/imported/shopping-cart.glb-6c5998f4a1799eb2ce070e0264c5b67b.scn"
 
 [deps]
 
-source_file="res://assets/models/fence.glb"
-dest_files=["res://.godot/imported/fence.glb-797e835e7ffc8bbdaf188afcf7920135.scn"]
+source_file="res://assets/models/minimarket/shopping-cart.glb"
+dest_files=["res://.godot/imported/shopping-cart.glb-6c5998f4a1799eb2ce070e0264c5b67b.scn"]
 
 [params]
 

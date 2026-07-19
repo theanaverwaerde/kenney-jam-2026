@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bsusnl5qmjclo"
-path="res://.godot/imported/pepper.glb-ae135c07709549d09d4383d2aea62e4d.scn"
+uid="uid://c4pt38e7auoj3"
+path="res://.godot/imported/pear.glb-ee5baaaa4620ec92a1269046a9da46e0.scn"
 
 [deps]
 
-source_file="res://assets/models/pepper.glb"
-dest_files=["res://.godot/imported/pepper.glb-ae135c07709549d09d4383d2aea62e4d.scn"]
+source_file="res://assets/models/food/pear.glb"
+dest_files=["res://.godot/imported/pear.glb-ee5baaaa4620ec92a1269046a9da46e0.scn"]
 
 [params]
 

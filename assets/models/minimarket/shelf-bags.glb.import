@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvblttnqlmdfq"
-path="res://.godot/imported/carrot.glb-cc7f4fec8af094a3b3c815af3d6d8fb5.scn"
+uid="uid://bi6gj8kixuxls"
+path="res://.godot/imported/shelf-bags.glb-59545a45c8902bc3962ed2b8775c1a16.scn"
 
 [deps]
 
-source_file="res://assets/models/carrot.glb"
-dest_files=["res://.godot/imported/carrot.glb-cc7f4fec8af094a3b3c815af3d6d8fb5.scn"]
+source_file="res://assets/models/minimarket/shelf-bags.glb"
+dest_files=["res://.godot/imported/shelf-bags.glb-59545a45c8902bc3962ed2b8775c1a16.scn"]
 
 [params]
 
-nodes/root_type="RigidBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
@@ -39,7 +39,15 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:shelf-bags": {
+"generate/physics": true,
+"physics/shape_type": 3,
+"primitive/size": Vector3(1, 4, 1)
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

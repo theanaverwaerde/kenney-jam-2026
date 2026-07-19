@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgctm3ijf4wcb"
-path="res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"
+uid="uid://dg87mnn34cbdj"
+path="res://.godot/imported/display-bread.glb-8372009bc95a6587274cd04efdce9693.scn"
 
 [deps]
 
-source_file="res://assets/models/shelf-boxes.glb"
-dest_files=["res://.godot/imported/shelf-boxes.glb-4c575e768b337bf25e10f524c98e9c6c.scn"]
+source_file="res://assets/models/minimarket/display-bread.glb"
+dest_files=["res://.godot/imported/display-bread.glb-8372009bc95a6587274cd04efdce9693.scn"]
 
 [params]
 
@@ -39,15 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:shelf-boxes": {
-"generate/physics": true,
-"physics/shape_type": 3,
-"primitive/size": Vector3(1, 3, 1)
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

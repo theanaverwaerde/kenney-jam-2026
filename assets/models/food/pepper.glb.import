@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cmuh01rt2wd68"
-path="res://.godot/imported/cash-register.glb-8d9469763970e694c7d4ee460e011456.scn"
+uid="uid://bsusnl5qmjclo"
+path="res://.godot/imported/pepper.glb-9c4642e9a770f501dde0a5b46c128ecf.scn"
 
 [deps]
 
-source_file="res://assets/models/cash-register.glb"
-dest_files=["res://.godot/imported/cash-register.glb-8d9469763970e694c7d4ee460e011456.scn"]
+source_file="res://assets/models/food/pepper.glb"
+dest_files=["res://.godot/imported/pepper.glb-9c4642e9a770f501dde0a5b46c128ecf.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
@@ -39,15 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:cash-register": {
-"generate/physics": true,
-"physics/shape_type": 3,
-"primitive/size": Vector3(1, 4, 1)
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

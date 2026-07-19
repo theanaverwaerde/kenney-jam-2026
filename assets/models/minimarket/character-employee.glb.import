@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bc45cc26pu8lv"
-path="res://.godot/imported/character-employee.glb-cfa6151d04fa06f09447fd13420ac634.scn"
+path="res://.godot/imported/character-employee.glb-f9f7ddb3ed946d746940f1dffae883da.scn"
 
 [deps]
 
-source_file="res://assets/models/character-employee.glb"
-dest_files=["res://.godot/imported/character-employee.glb-cfa6151d04fa06f09447fd13420ac634.scn"]
+source_file="res://assets/models/minimarket/character-employee.glb"
+dest_files=["res://.godot/imported/character-employee.glb-f9f7ddb3ed946d746940f1dffae883da.scn"]
 
 [params]
 

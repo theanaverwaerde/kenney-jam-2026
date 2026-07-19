@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_1nud3"]
 [ext_resource type="PackedScene" uid="uid://cb0lhktuniqwl" path="res://scenes/room_4.tscn" id="2_pmnxm"]
-[ext_resource type="PackedScene" uid="uid://clc4advvbprfs" path="res://assets/models/egg.glb" id="3_rjoje"]
-[ext_resource type="PackedScene" uid="uid://dtbmafqgv1l6t" path="res://assets/models/banana.glb" id="4_bg4i0"]
-[ext_resource type="PackedScene" uid="uid://c4pt38e7auoj3" path="res://assets/models/pear.glb" id="5_6w2ej"]
-[ext_resource type="PackedScene" uid="uid://dopx2bb0yttbl" path="res://assets/models/burger.glb" id="6_yvqia"]
-[ext_resource type="PackedScene" uid="uid://boi7wk0mgv2qr" path="res://assets/models/apple.glb" id="7_1bltn"]
+[ext_resource type="PackedScene" uid="uid://clc4advvbprfs" path="res://assets/models/food/egg.glb" id="3_rjoje"]
+[ext_resource type="PackedScene" uid="uid://dtbmafqgv1l6t" path="res://assets/models/food/banana.glb" id="4_bg4i0"]
+[ext_resource type="PackedScene" uid="uid://c4pt38e7auoj3" path="res://assets/models/food/pear.glb" id="5_6w2ej"]
+[ext_resource type="PackedScene" uid="uid://dopx2bb0yttbl" path="res://assets/models/food/burger.glb" id="6_yvqia"]
+[ext_resource type="PackedScene" uid="uid://boi7wk0mgv2qr" path="res://assets/models/food/apple.glb" id="7_1bltn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bg4i0"]
 radius = 0.067871094
@@ -32,7 +32,7 @@ radius = 0.11608292
 next_scene = ExtResource("2_pmnxm")
 
 [node name="egg" parent="RoomBase" unique_id=719900257 instance=ExtResource("3_rjoje")]
-transform = Transform3D(3.8161519, 1.1987435, 0, -1.1987435, 3.8161519, 0, 0, 0, 4, -2.336917, 5.894729, 0.9845395)
+transform = Transform3D(3.8161519, 1.1987433, 0, -1.1987433, 3.8161519, 0, 0, 0, 4, -2.336917, 5.894729, 0.9845395)
 collision_layer = 4
 collision_mask = 15
 mass = 80.0

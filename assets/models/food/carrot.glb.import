@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://byckxkdorpbmn"
-path="res://.godot/imported/shopping-basket.glb-2b9d0d064568307586358ef4b041caa4.scn"
+uid="uid://bvblttnqlmdfq"
+path="res://.godot/imported/carrot.glb-7bf3af628d06cd4a83a9effa3028d472.scn"
 
 [deps]
 
-source_file="res://assets/models/shopping-basket.glb"
-dest_files=["res://.godot/imported/shopping-basket.glb-2b9d0d064568307586358ef4b041caa4.scn"]
+source_file="res://assets/models/food/carrot.glb"
+dest_files=["res://.godot/imported/carrot.glb-7bf3af628d06cd4a83a9effa3028d472.scn"]
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="RigidBody3D"
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false

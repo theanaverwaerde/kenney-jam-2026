@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c07j24hti6tl"
-path="res://.godot/imported/shelf-end.glb-71fa55d4458bc0ef1d72a4d2a3933f6f.scn"
+uid="uid://cmuh01rt2wd68"
+path="res://.godot/imported/cash-register.glb-20d52a4ad429551b2b9713c298b22a6f.scn"
 
 [deps]
 
-source_file="res://assets/models/shelf-end.glb"
-dest_files=["res://.godot/imported/shelf-end.glb-71fa55d4458bc0ef1d72a4d2a3933f6f.scn"]
+source_file="res://assets/models/minimarket/cash-register.glb"
+dest_files=["res://.godot/imported/cash-register.glb-20d52a4ad429551b2b9713c298b22a6f.scn"]
 
 [params]
 
@@ -41,11 +41,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:shelf-end": {
+"PATH:cash-register": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(0, 0, -0.25),
-"primitive/size": Vector3(1, 4, 0.5)
+"primitive/size": Vector3(1, 4, 1)
 }
 }
 }

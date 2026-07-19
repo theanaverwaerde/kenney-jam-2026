@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://clc4advvbprfs"
-path="res://.godot/imported/egg.glb-856b08b4f5cc41a2d8aa2eddc2ab2198.scn"
+uid="uid://dbijw6vnaufno"
+path="res://.godot/imported/column.glb-f723db93d9d557bdd938df7418452130.scn"
 
 [deps]
 
-source_file="res://assets/models/egg.glb"
-dest_files=["res://.godot/imported/egg.glb-856b08b4f5cc41a2d8aa2eddc2ab2198.scn"]
+source_file="res://assets/models/minimarket/column.glb"
+dest_files=["res://.godot/imported/column.glb-f723db93d9d557bdd938df7418452130.scn"]
 
 [params]
 
-nodes/root_type="RigidBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
@@ -39,7 +39,16 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:column": {
+"generate/physics": true,
+"physics/shape_type": 6,
+"primitive/height": 6.0,
+"primitive/radius": 0.36
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

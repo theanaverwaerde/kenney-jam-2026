@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b672x74r3irkw"
-path="res://.godot/imported/honey.glb-6db344439c9857edfefc4e05d433316d.scn"
+uid="uid://boi7wk0mgv2qr"
+path="res://.godot/imported/apple.glb-6d889b8d8fa98926cecbc4eeb6b4e9eb.scn"
 
 [deps]
 
-source_file="res://assets/models/honey.glb"
-dest_files=["res://.godot/imported/honey.glb-6db344439c9857edfefc4e05d433316d.scn"]
+source_file="res://assets/models/food/apple.glb"
+dest_files=["res://.godot/imported/apple.glb-6d889b8d8fa98926cecbc4eeb6b4e9eb.scn"]
 
 [params]
 

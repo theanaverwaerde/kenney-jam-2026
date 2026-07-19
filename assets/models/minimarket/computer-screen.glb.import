@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dtbmafqgv1l6t"
-path="res://.godot/imported/banana.glb-630165bafa8c8795383622c68bc06b0b.scn"
+uid="uid://b81ung3v6k11r"
+path="res://.godot/imported/computer-screen.glb-3a3deb794dd216a9108aadc2651d087c.scn"
 
 [deps]
 
-source_file="res://assets/models/banana.glb"
-dest_files=["res://.godot/imported/banana.glb-630165bafa8c8795383622c68bc06b0b.scn"]
+source_file="res://assets/models/minimarket/computer-screen.glb"
+dest_files=["res://.godot/imported/computer-screen.glb-3a3deb794dd216a9108aadc2651d087c.scn"]
 
 [params]
 
-nodes/root_type="RigidBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false

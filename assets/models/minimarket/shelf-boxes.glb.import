@@ -3,17 +3,17 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://boi7wk0mgv2qr"
-path="res://.godot/imported/apple.glb-e37a1988b0b05ceb0357a356c2726bde.scn"
+uid="uid://bgctm3ijf4wcb"
+path="res://.godot/imported/shelf-boxes.glb-b21bb1dad4c650a0e1cdf4c5907f4cc6.scn"
 
 [deps]
 
-source_file="res://assets/models/apple.glb"
-dest_files=["res://.godot/imported/apple.glb-e37a1988b0b05ceb0357a356c2726bde.scn"]
+source_file="res://assets/models/minimarket/shelf-boxes.glb"
+dest_files=["res://.godot/imported/shelf-boxes.glb-b21bb1dad4c650a0e1cdf4c5907f4cc6.scn"]
 
 [params]
 
-nodes/root_type="RigidBody3D"
+nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
@@ -39,7 +39,15 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:shelf-boxes": {
+"generate/physics": true,
+"physics/shape_type": 3,
+"primitive/size": Vector3(1, 3, 1)
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

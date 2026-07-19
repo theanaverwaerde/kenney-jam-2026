@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cto78a8ew6esd"]
 
 [ext_resource type="Script" uid="uid://408dcmjuclyb" path="res://scripts/final_door.gd" id="1_fxvhj"]
-[ext_resource type="PackedScene" uid="uid://h8i4xasa4dd1" path="res://assets/models/wall-door-rotate.glb" id="2_aermx"]
+[ext_resource type="PackedScene" uid="uid://h8i4xasa4dd1" path="res://assets/models/minimarket/wall-door-rotate.glb" id="2_aermx"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vb667"]
 plane = Plane(0, 0, 1, 0)

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ctel6vinta4fw"]
 
-[ext_resource type="Texture2D" uid="uid://ccymsqupoh3lh" path="res://assets/models/Textures/colormap.png" id="1_joypm"]
+[ext_resource type="Texture2D" uid="uid://ccymsqupoh3lh" path="res://assets/models/minimarket/Textures/colormap.png" id="1_joypm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6umw"]
 resource_name = "colormap"

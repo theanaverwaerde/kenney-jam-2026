@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4pt38e7auoj3"
-path="res://.godot/imported/pear.glb-5fd7b5f22ab97be61565f18f5d4a7f20.scn"
+uid="uid://ccdg2vvyque4x"
+path="res://.godot/imported/display-fruit.glb-05ba108ceb07b733c4f6e7065a4384d8.scn"
 
 [deps]
 
-source_file="res://assets/models/pear.glb"
-dest_files=["res://.godot/imported/pear.glb-5fd7b5f22ab97be61565f18f5d4a7f20.scn"]
+source_file="res://assets/models/minimarket/display-fruit.glb"
+dest_files=["res://.godot/imported/display-fruit.glb-05ba108ceb07b733c4f6e7065a4384d8.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=true
+animation/import=false
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
@@ -39,7 +39,19 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:display-fruit": {
+"physics/layer": 4,
+"physics/mask": 15,
+"physics/shape_type": 5,
+"primitive/height": 0.5,
+"primitive/position": Vector3(0, 0.25, 0),
+"primitive/radius": 0.3,
+"primitive/size": Vector3(0.6, 0.6, 0.6)
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

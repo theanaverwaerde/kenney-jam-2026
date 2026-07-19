@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnojos203txe7"]
 
 [ext_resource type="Script" uid="uid://bs4tnpepha7qa" path="res://scripts/player.gd" id="1_72ieh"]
-[ext_resource type="PackedScene" uid="uid://bc45cc26pu8lv" path="res://assets/models/character-employee.glb" id="2_4dohe"]
+[ext_resource type="PackedScene" uid="uid://bc45cc26pu8lv" path="res://assets/models/minimarket/character-employee.glb" id="2_4dohe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p8lkw"]
 radius = 0.19335938
