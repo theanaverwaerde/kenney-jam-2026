@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c65xwm527578a"]
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_8oql1"]
-[ext_resource type="PackedScene" uid="uid://b3rovvi5k8dwg" path="res://scenes/end1.tscn" id="2_irjyx"]
+[ext_resource type="PackedScene" uid="uid://bqrgvitc7nie4" path="res://scenes/room_2.tscn" id="2_0akh5"]
 [ext_resource type="PackedScene" uid="uid://41bbtqlcjvkk" path="res://prefabs/objects/apple_basket.tscn" id="2_xhekj"]
 [ext_resource type="PackedScene" uid="uid://cdjm33l862uix" path="res://prefabs/objects/bag.tscn" id="3_irjyx"]
 [ext_resource type="PackedScene" uid="uid://ddi840qy0dqhx" path="res://prefabs/objects/bread.tscn" id="4_0akh5"]
@@ -11,7 +11,7 @@
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_8oql1")]
 unique_name_in_owner = true
-next_scene = ExtResource("2_irjyx")
+next_scene = ExtResource("2_0akh5")
 
 [node name="display-fruit2" parent="." unique_id=36336197 instance=ExtResource("2_xhekj")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.16875075, 2.3841858e-07, -2.0267427)

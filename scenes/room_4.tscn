@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cb0lhktuniqwl"]
+
+[ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_f3snk"]
+[ext_resource type="PackedScene" uid="uid://bd2bp53owwrs2" path="res://scenes/room_5.tscn" id="2_dbpl5"]
+
+[node name="Node" type="Node" unique_id=144643641]
+
+[node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_f3snk")]
+next_scene = ExtResource("2_dbpl5")
