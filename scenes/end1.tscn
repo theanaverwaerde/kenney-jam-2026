@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b3rovvi5k8dwg"]
+
+[ext_resource type="Texture2D" uid="uid://0h5rpy6lxwd6" path="res://assets/ui/end1.png" id="1_eve1o"]
+[ext_resource type="Script" uid="uid://bnph3aptwaje4" path="res://scenes/end_1.gd" id="1_mf4hv"]
+[ext_resource type="FontFile" uid="uid://b4cds7mdxe0tr" path="res://assets/fonts/RifficFree-Bold.ttf" id="2_mf4hv"]
+[ext_resource type="Texture2D" uid="uid://dxtbypfl40sm8" path="res://assets/ui/Asset_Menu_button_inactive.png" id="3_vq2op"]
+[ext_resource type="Texture2D" uid="uid://cf4m5r28s22ku" path="res://assets/ui/Asset_Menu_button_active.png" id="4_etgc5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lg67w"]
+texture = ExtResource("1_eve1o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3108r"]
+texture = ExtResource("3_vq2op")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4dtu"]
+texture = ExtResource("4_etgc5")
+modulate_color = Color(1, 0.18039216, 0.47058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcbu6"]
+texture = ExtResource("4_etgc5")
+modulate_color = Color(0, 0.81960785, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pxgrc"]
+texture = ExtResource("4_etgc5")
+modulate_color = Color(1, 0.18039216, 0.47058824, 1)
+
+[node name="Control" type="Control" unique_id=373804186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mf4hv")
+
+[node name="Panel" type="Panel" parent="." unique_id=2102255374]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lg67w")
+
+[node name="Menu Button" type="Button" parent="." unique_id=1447474450]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.5
+anchor_right = 0.19000001
+anchor_bottom = 0.596
+offset_left = 0.3999977
+offset_top = -1.0
+offset_right = 0.11997986
+offset_bottom = -0.20800781
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.18039216, 0.47058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("2_mf4hv")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_3108r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s4dtu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fcbu6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_pxgrc")
+text = "MENU"
+
+[connection signal="pressed" from="Menu Button" to="." method="_on_menu_button_pressed"]
