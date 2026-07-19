@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://jsbi1sfqh3d"]
 
 [ext_resource type="Script" uid="uid://b1ubcp7ck17al" path="res://scripts/scale.gd" id="1_mqfc0"]
+[ext_resource type="PackedScene" uid="uid://bi84l78vprmu6" path="res://assets/models/mini-market/shopping-cart.glb" id="2_r241b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rjpwp"]
+size = Vector3(1, 1.4824219, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8lkw"]
-albedo_color = Color(0.86691034, 4.0189175e-06, 9.62615e-07, 1)
-
-[sub_resource type="QuadMesh" id="QuadMesh_m6kt4"]
-material = SubResource("StandardMaterial3D_p8lkw")
-orientation = 1
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6kt4"]
+size = Vector3(0.78222656, 1.6018677, 1)
 
 [node name="Scale" type="Area3D" unique_id=1222534552]
 collision_layer = 32
@@ -18,9 +16,15 @@ script = ExtResource("1_mqfc0")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=153209106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27756858, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7524864, 0)
 shape = SubResource("BoxShape3D_rjpwp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1528475816]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
-mesh = SubResource("QuadMesh_m6kt4")
+[node name="shopping-cart2" parent="." unique_id=599259898 instance=ExtResource("2_r241b")]
+transform = Transform3D(-2.2431452, 0, 1.9610198e-07, 0, 2.2431452, 0, -1.9610198e-07, 0, -2.2431452, 0, -0.14124155, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1364225820]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=678879359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33694458, 0)
+shape = SubResource("BoxShape3D_m6kt4")

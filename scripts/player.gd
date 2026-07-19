@@ -8,7 +8,6 @@ extends CharacterBody3D
 @export var mass_speed_multiplier := .5
 
 @onready var raycast: RayCast3D = $RayCast3D
-@export_flags_3d_physics var grabbed_layer: int
 
 @onready var animation_player: AnimationPlayer = $"character-employee2/AnimationPlayer"
 
@@ -24,6 +23,8 @@ func _physics_process(delta: float) -> void:
 	move(delta)
 	
 	grab()
+	
+	anim_handle()
 
 func move(delta: float) -> void:
 	if not is_on_floor():
@@ -117,3 +118,9 @@ func grab() -> void:
 	grabbed_obj = obj
 	grabbed_obj.collision_layer = 1 << 3 # Grabbed Layer
 	distance_grabbed = grabbed_obj.global_position.distance_to(global_position)
+
+func anim_handle() -> void:
+	if velocity:
+		animation_player.play("walk")
+	else:
+		animation_player.play("idle")
