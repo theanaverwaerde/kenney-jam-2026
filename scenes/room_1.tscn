@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://41bbtqlcjvkk" path="res://prefabs/objects/apple_basket.tscn" id="2_xhekj"]
 [ext_resource type="PackedScene" uid="uid://cdjm33l862uix" path="res://prefabs/objects/bag.tscn" id="3_irjyx"]
 [ext_resource type="PackedScene" uid="uid://ddi840qy0dqhx" path="res://prefabs/objects/bread.tscn" id="4_0akh5"]
+[ext_resource type="FontFile" uid="uid://b4cds7mdxe0tr" path="res://assets/fonts/RifficFree-Bold.ttf" id="7_3wwl0"]
 [ext_resource type="PackedScene" uid="uid://ctel6vinta4fw" path="res://prefabs/objects/box.tscn" id="7_d0u7m"]
 
 [node name="Room1" type="Node" unique_id=1860400475]
@@ -30,3 +31,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1144035, 0, -0.76605725)
 collision_layer = 4
 collision_mask = 15
 mass = 10.0
+
+[node name="Label" type="Label" parent="." unique_id=266520790]
+anchors_preset = -1
+anchor_left = 0.081
+anchor_top = 0.915
+anchor_right = 0.43100002
+anchor_bottom = 0.998
+offset_left = 4.6880035
+offset_top = 0.079956055
+offset_right = 0.48797607
+offset_bottom = 6.2959595
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("7_3wwl0")
+theme_override_font_sizes/font_size = 19
+text = "Move (keyboard): WASD or ZQSD or ARROWS
+Move (Controller): Left Stick"
+
+[node name="Label2" type="Label" parent="." unique_id=1096210733]
+anchors_preset = -1
+anchor_left = 0.53900003
+anchor_top = 0.90700006
+anchor_right = 0.94500005
+anchor_bottom = 0.998
+offset_left = 0.07196045
+offset_top = 0.26397705
+offset_right = 0.35998535
+offset_bottom = 0.29595947
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("7_3wwl0")
+theme_override_font_sizes/font_size = 19
+text = "Grab/Release (keyboard): E or Spacebar
+Grab/Release (Controller): Xbox A - Switch B - PS5 X"
+horizontal_alignment = 2
