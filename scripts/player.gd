@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var mass_speed_multiplier := .5
 
 @onready var raycast: RayCast3D = $RayCast3D
+@onready var shapecast: ShapeCast3D = $ShapeCast3D
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 
@@ -97,25 +98,27 @@ func grab() -> void:
 		release_obj.emit(grabbed_obj)
 		grabbed_obj = null
 		return
-	elif not raycast.is_colliding():
+	
+	if not shapecast.is_colliding():
 		return
-		
-	var obj := raycast.get_collider()
-	if obj is Scale:
-		var scale_area = obj
-		# Grab from Scale if have an object
-		obj = obj.take_obj()
-		if not obj:
-			# if no object try a cast without this scale
-			raycast.add_exception(scale_area)
-			raycast.force_raycast_update()
-			raycast.remove_exception(scale_area)
-			if not raycast.is_colliding():
-				return
-			obj = raycast.get_collider()
+	
+	var nodes: Array[RigidBody3D] = []
+	for i in range(shapecast.get_collision_count()):
+		var obj = shapecast.get_collider(i)
+		if obj is Scale:
+			# Grab from Scale if have an object
+			obj = obj.take_obj()
+			if not obj:
+				continue
+		nodes.append(obj)
+	
+	if len(nodes) == 0:
+		return
+	
+	nodes.sort_custom(SortDistance)
 	
 	# Grab Object
-	grabbed_obj = obj
+	grabbed_obj = nodes[0]
 	grabbed_obj.collision_layer = 1 << 3 # Grabbed Layer
 	var posA = grabbed_obj.global_position
 	var posB = global_position
@@ -124,6 +127,15 @@ func grab() -> void:
 	distance_grabbed = posA.distance_to(posB)
 	
 	animation_tree.set("parameters/InteractOS/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+
+func SortDistance(a: RigidBody3D, b: RigidBody3D):
+	var posA = a.global_position
+	var posB = b.global_position
+	var posGlobal = global_position
+	posA.y = 0
+	posB.y = 0
+	posGlobal.y = 0
+	return posGlobal.distance_to(posA) > posGlobal.distance_to(posB)
 
 func anim_handle() -> void:
 	var state: String

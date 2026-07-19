@@ -7,6 +7,9 @@
 radius = 0.19335938
 height = 0.6586914
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6kt4"]
+size = Vector3(0.6, 0.2, 0.6)
+
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_4dohe"]
 filter_enabled = true
 filters = ["character-employee/Skeleton3D:arm-left", "character-employee/Skeleton3D:arm-right"]
@@ -47,7 +50,6 @@ input_1/break_loop_at_end = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vb667"]
-graph_offset = Vector2(-154.17456, 193.25278)
 nodes/output/position = Vector2(1148.6874, 532.14056)
 nodes/state/node = SubResource("AnimationNodeTransition_ht1c8")
 nodes/state/position = Vector2(302.515, 291.3561)
@@ -83,21 +85,23 @@ metadata/_edit_group_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3293457, 0)
 shape = SubResource("CapsuleShape3D_p8lkw")
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1998946516]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04906507, 0)
-target_position = Vector3(0, 0, -1)
+[node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=817233301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_m6kt4")
+target_position = Vector3(0, 0, -0.4)
+max_results = 8
 collision_mask = 36
-hit_from_inside = true
 collide_with_areas = true
+debug_shape_custom_color = Color(7.70092e-07, 0.86415935, 0.1219547, 1)
 
 [node name="character-employee2" parent="." unique_id=1475560683 instance=ExtResource("2_4dohe")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="Skeleton3D" parent="character-employee2/character-employee" parent_id_path=PackedInt32Array(1475560683, 1220639626) index="0" unique_id=2142889286]
-bones/3/rotation = Quaternion(-0.026676679, 0, 0, 0.9996442)
-bones/4/rotation = Quaternion(0, 0, -0.30759037, 0.9515189)
-bones/5/rotation = Quaternion(0, 0, 0.30759037, 0.9515189)
-bones/6/rotation = Quaternion(0, 0.026676679, 0, 0.9996442)
+[node name="Skeleton3D" parent="character-employee2/character-employee" parent_id_path=PackedInt32Array(1475560683, 2116129900) index="0" unique_id=242047915]
+bones/3/rotation = Quaternion(-0.0037793624, 0, 0, 0.9999929)
+bones/4/rotation = Quaternion(0, 0, -0.372184, 0.928159)
+bones/5/rotation = Quaternion(0, 0, 0.372184, 0.928159)
+bones/6/rotation = Quaternion(0, 0.0037793624, 0, 0.9999929)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=318179094]
 root_node = NodePath("../character-employee2")
