@@ -24,10 +24,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_d2utt"]
 size = Vector3(0.76171875, 0.5871277, 0.5664787)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkd6m"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_otfk3"]
 size = Vector3(1, 2.1850586, 2.8898926)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_bkd6m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3hqbg"]
 size = Vector3(0.42382813, 0.5078125, 0.49438477)
@@ -87,6 +87,28 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.255, 0.07)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-fox2" unique_id=1130241007]
 shape = SubResource("BoxShape3D_d2utt")
 
+[node name="animal-elephant2" parent="." unique_id=1654911538 instance=ExtResource("5_fmcxs")]
+transform = Transform3D(-0.8155559, -5.9604645e-08, -0.5786786, -4.4703484e-08, 1.0000001, -4.4703484e-08, 0.57867855, -1.0430813e-07, -0.81555617, 3.13112, 4.5079727, 0.22311723)
+collision_layer = 4
+collision_mask = 15
+mass = 167.0
+
+[node name="animal-elephant" parent="animal-elephant2" index="0" unique_id=1814870451]
+transform = Transform3D(0.9944878, -0.10477592, -0.003910899, 0.10477592, 0.9917127, 0.074343845, -0.003911078, -0.074343845, 0.9972248, -0.13080812, -0.71632385, -0.19121909)
+
+[node name="root" parent="animal-elephant2/animal-elephant" index="0" unique_id=7444885]
+transform = Transform3D(1, 1.3995134e-09, -2.9802322e-08, 4.916714e-09, 1, 8.69278e-10, -2.9802322e-08, 7.525081e-09, 1, 0.062274456, -0.009891987, 0.04418683)
+
+[node name="body" parent="animal-elephant2/animal-elephant/root" index="0" unique_id=1498942500]
+transform = Transform3D(0.9824088, 0.17322516, 0.069756456, -0.17364816, 0.9848077, -4.656613e-10, -0.0686967, -0.01211308, 0.9975641, 1.573182e-08, 0.18124998, -3.8083503e-08)
+
+[node name="tail" parent="animal-elephant2/animal-elephant/root/body" index="0" unique_id=584018568]
+transform = Transform3D(0.9396926, -0.34202015, 0, 0.34202015, 0.9396926, 0, 0, 0, 1, 0, 0.46311063, 0.625)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-elephant2" unique_id=1598977891]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_bkd6m")
+
 [node name="animal-chick2" parent="." unique_id=1366910740 instance=ExtResource("4_t7grj")]
 transform = Transform3D(0.38058317, 0, 0.9247467, -0.74187917, 0.59698653, 0.3053233, -0.5520613, -0.8022512, 0.22720303, -1.0453508, 1.3495431, -1.7285404)
 collision_layer = 4
@@ -102,28 +124,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7807355, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2" unique_id=1326965288]
 transform = Transform3D(0.2, 6.938894e-17, -3.7252903e-09, 0, 0.2, 3.7252903e-09, 3.7252903e-09, -3.7252903e-09, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_otfk3")
-
-[node name="animal-elephant2" parent="animal-chick2" unique_id=1654911538 instance=ExtResource("5_fmcxs")]
-transform = Transform3D(-0.6298529, -0.7418792, 0.23000178, -0.46424565, 0.5969867, 0.65428096, -0.6227051, 0.30532327, -0.720428, -1.8311138, 0.3198204, 5.2699423)
-collision_layer = 4
-collision_mask = 15
-mass = 167.0
-
-[node name="animal-elephant" parent="animal-chick2/animal-elephant2" index="0" unique_id=1814870451]
-transform = Transform3D(0.9944878, -0.10477592, -0.003910899, 0.10477592, 0.9917127, 0.074343845, -0.003911078, -0.074343845, 0.9972248, -0.13080812, -0.71632385, -0.19121909)
-
-[node name="root" parent="animal-chick2/animal-elephant2/animal-elephant" index="0" unique_id=7444885]
-transform = Transform3D(1, 1.3995134e-09, -2.9802322e-08, 4.916714e-09, 1, 8.69278e-10, -2.9802322e-08, 7.525081e-09, 1, 0.062274456, -0.009891987, 0.04418683)
-
-[node name="body" parent="animal-chick2/animal-elephant2/animal-elephant/root" index="0" unique_id=1498942500]
-transform = Transform3D(0.9824088, 0.17322516, 0.069756456, -0.17364816, 0.9848077, -4.656613e-10, -0.0686967, -0.01211308, 0.9975641, 1.573182e-08, 0.18124998, -3.8083503e-08)
-
-[node name="tail" parent="animal-chick2/animal-elephant2/animal-elephant/root/body" index="0" unique_id=584018568]
-transform = Transform3D(0.9396926, -0.34202015, 0, 0.34202015, 0.9396926, 0, 0, 0, 1, 0, 0.46311063, 0.625)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2/animal-elephant2" unique_id=1598977891]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-shape = SubResource("BoxShape3D_bkd6m")
 
 [node name="animal-koala2" parent="." unique_id=708105075 instance=ExtResource("6_13u40")]
 transform = Transform3D(-0.564557, -2.9802322e-08, 0.82539445, -1.4901161e-08, 1.0000002, 0, -0.8253944, -9.685755e-08, -0.5645572, -3.7349393, 2.723, -3.4658628)
@@ -303,8 +303,8 @@ collision_mask = 15
 mass = 10.0
 
 [editable path="animal-fox2"]
+[editable path="animal-elephant2"]
 [editable path="animal-chick2"]
-[editable path="animal-chick2/animal-elephant2"]
 [editable path="animal-koala2"]
 [editable path="animal-dog2"]
 [editable path="kart-oopi2"]
