@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_f3snk"]
 [ext_resource type="PackedScene" uid="uid://bd2bp53owwrs2" path="res://scenes/room_5.tscn" id="2_dbpl5"]
 [ext_resource type="PackedScene" uid="uid://bgxeykk50lgd3" path="res://assets/models/vehicles/cars/kart-oopi.glb" id="3_ccapj"]
+[ext_resource type="Texture2D" uid="uid://dan04xaadeu1h" path="res://textures/room4.png" id="3_fkic7"]
 [ext_resource type="PackedScene" uid="uid://cd5s3w4dkdj55" path="res://assets/models/vehicles/cars/tractor.glb" id="4_5d4n5"]
 [ext_resource type="PackedScene" uid="uid://cp8c46vxj8x62" path="res://assets/models/vehicles/cars/police.glb" id="5_6eqho"]
 [ext_resource type="PackedScene" uid="uid://dih3gftpm2bcv" path="res://assets/models/vehicles/trains/train-locomotive-b.glb" id="6_o8owr"]
@@ -27,6 +28,7 @@ size = Vector3(1.6734619, 1.8183136, 3.1122742)
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_f3snk")]
 next_scene = ExtResource("2_dbpl5")
+colormap = ExtResource("3_fkic7")
 
 [node name="kart-oopi2" parent="." unique_id=713688678 instance=ExtResource("3_ccapj")]
 transform = Transform3D(-0.84829634, -0.06028621, 0.5260788, 0.23530518, 0.84709996, 0.4765008, -0.47436783, 0.5280028, -0.7044062, -3.8331666, 3.2630422, -3.1131382)

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_ct5gj"]
 [ext_resource type="PackedScene" uid="uid://b3rovvi5k8dwg" path="res://scenes/end1.tscn" id="2_ohrev"]
+[ext_resource type="Texture2D" uid="uid://di2ktxbv1fhar" path="res://textures/room6.png" id="3_3hqbg"]
 [ext_resource type="PackedScene" uid="uid://d0fmfxvvtxnax" path="res://assets/models/animals/animal-fox.glb" id="3_mqkto"]
 [ext_resource type="PackedScene" uid="uid://bv2ti1iq672cs" path="res://assets/models/animals/animal-chick.glb" id="4_t7grj"]
 [ext_resource type="PackedScene" uid="uid://b7j8klirxd31t" path="res://assets/models/animals/animal-elephant.glb" id="5_fmcxs"]
@@ -74,6 +75,7 @@ radius = 0.17773438
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_ct5gj")]
 next_scene = ExtResource("2_ohrev")
+colormap = ExtResource("3_3hqbg")
 
 [node name="animal-fox2" parent="." unique_id=1733254123 instance=ExtResource("3_mqkto")]
 transform = Transform3D(-0.6653991, 0, -0.7464879, -0.40492374, 0.8400956, 0.36093804, 0.6271212, 0.54243845, -0.5589988, -3.35019, 12.005642, 2.2735815)
@@ -81,7 +83,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 12.0
 
-[node name="animal-fox" parent="animal-fox2" index="0" unique_id=2055341553]
+[node name="animal-fox" parent="animal-fox2" index="0" unique_id=832219164]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.255, 0.07)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-fox2" unique_id=1130241007]
@@ -93,16 +95,16 @@ collision_layer = 4
 collision_mask = 15
 mass = 167.0
 
-[node name="animal-elephant" parent="animal-elephant2" index="0" unique_id=1814870451]
+[node name="animal-elephant" parent="animal-elephant2" index="0" unique_id=1634855802]
 transform = Transform3D(0.9944878, -0.10477592, -0.003910899, 0.10477592, 0.9917127, 0.074343845, -0.003911078, -0.074343845, 0.9972248, -0.13080812, -0.71632385, -0.19121909)
 
-[node name="root" parent="animal-elephant2/animal-elephant" index="0" unique_id=7444885]
+[node name="root" parent="animal-elephant2/animal-elephant" index="0" unique_id=692897921]
 transform = Transform3D(1, 1.3995134e-09, -2.9802322e-08, 4.916714e-09, 1, 8.69278e-10, -2.9802322e-08, 7.525081e-09, 1, 0.062274456, -0.009891987, 0.04418683)
 
-[node name="body" parent="animal-elephant2/animal-elephant/root" index="0" unique_id=1498942500]
+[node name="body" parent="animal-elephant2/animal-elephant/root" index="0" unique_id=452463232]
 transform = Transform3D(0.9824088, 0.17322516, 0.069756456, -0.17364816, 0.9848077, -4.656613e-10, -0.0686967, -0.01211308, 0.9975641, 1.573182e-08, 0.18124998, -3.8083503e-08)
 
-[node name="tail" parent="animal-elephant2/animal-elephant/root/body" index="0" unique_id=584018568]
+[node name="tail" parent="animal-elephant2/animal-elephant/root/body" index="0" unique_id=1410766006]
 transform = Transform3D(0.9396926, -0.34202015, 0, 0.34202015, 0.9396926, 0, 0, 0, 1, 0, 0.46311063, 0.625)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-elephant2" unique_id=1598977891]
@@ -115,10 +117,10 @@ collision_layer = 4
 collision_mask = 15
 mass = 3.0
 
-[node name="animal-chick" parent="animal-chick2" index="0" unique_id=804460225]
+[node name="animal-chick" parent="animal-chick2" index="0" unique_id=859609569]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
-[node name="root" parent="animal-chick2/animal-chick" index="0" unique_id=1100679343]
+[node name="root" parent="animal-chick2/animal-chick" index="0" unique_id=483060841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7807355, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2" unique_id=1326965288]
@@ -131,7 +133,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 11.0
 
-[node name="root" parent="animal-koala2/animal-koala" parent_id_path=PackedInt32Array(708105075, 162761457) index="0" unique_id=208015988]
+[node name="root" parent="animal-koala2/animal-koala" parent_id_path=PackedInt32Array(708105075, 787276041) index="0" unique_id=713862991]
 transform = Transform3D(0.4, 0, 0, -1.7763565e-16, 0.4, 1.7763568e-15, 0, 4.440892e-16, 0.4, 0, -0.2885299, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="animal-koala2" unique_id=1718885653]
@@ -144,7 +146,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 13.0
 
-[node name="root" parent="animal-dog2/animal-dog" parent_id_path=PackedInt32Array(1142120, 972164320) index="0" unique_id=2101311164]
+[node name="root" parent="animal-dog2/animal-dog" parent_id_path=PackedInt32Array(1142120, 194058755) index="0" unique_id=2464501]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.2637998, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-dog2" unique_id=1094795571]
@@ -156,7 +158,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 25.0
 
-[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1521850322]
+[node name="kart-oopi" parent="kart-oopi2" index="0" unique_id=1556325954]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.263, -0.055)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="kart-oopi2" unique_id=1001657995]
@@ -169,19 +171,19 @@ collision_layer = 4
 collision_mask = 15
 mass = 150.0
 
-[node name="wheel-front-right" parent="tractor" index="0" unique_id=194340569]
+[node name="wheel-front-right" parent="tractor" index="0" unique_id=697993070]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.16018414, -0.3029548, 0.3918115)
 
-[node name="wheel-front-left" parent="tractor" index="1" unique_id=2135090367]
+[node name="wheel-front-left" parent="tractor" index="1" unique_id=2038422066]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.16018414, -0.3029548, 0.3918115)
 
-[node name="wheel-back-right" parent="tractor" index="2" unique_id=1082574859]
+[node name="wheel-back-right" parent="tractor" index="2" unique_id=1508775357]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, -0.15669203, -0.1826126, -0.39251256)
 
-[node name="wheel-back-left" parent="tractor" index="3" unique_id=1995588416]
+[node name="wheel-back-left" parent="tractor" index="3" unique_id=417465777]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0.15669203, -0.1826126, -0.39251256)
 
-[node name="body" parent="tractor" index="4" unique_id=1700450634]
+[node name="body" parent="tractor" index="4" unique_id=855957356]
 transform = Transform3D(0.60386896, 0, 0, 0, 0.6021006, 0, 0, 0, 0.6006518, 0, -0.38564557, 0.018757045)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tractor" unique_id=687380132]
@@ -194,7 +196,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 274.0
 
-[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1624620845]
+[node name="boat-house-c" parent="boat-house-c2" index="0" unique_id=1137439514]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.885, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="boat-house-c2" unique_id=944850221]
@@ -206,7 +208,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 80.0
 
-[node name="banana" parent="banana2" index="0" unique_id=1970774476]
+[node name="banana" parent="banana2" index="0" unique_id=1501744612]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.1175871e-08, -0.36905771, -2.7939677e-09)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="banana2" unique_id=633119019]
@@ -219,7 +221,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 18.0
 
-[node name="pear" parent="pear2" index="0" unique_id=510166235]
+[node name="pear" parent="pear2" index="0" unique_id=205824649]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.7252903e-09, -0.24922517, 7.450581e-09)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pear2" unique_id=660323761]
@@ -231,7 +233,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 150.0
 
-[node name="apple" parent="apple" index="0" unique_id=913063834]
+[node name="apple" parent="apple" index="0" unique_id=140223063]
 transform = Transform3D(4.8, 0, 0, 0, 4.8, 0, 0, 0, 4.8, 1.3411046e-08, -0.42457932, -6.705523e-09)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="apple" unique_id=1176630042]
@@ -242,7 +244,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3237772, 0.5783267, 2.1421
 collision_layer = 4
 collision_mask = 15
 
-[node name="egg" parent="egg" index="0" unique_id=2063477669]
+[node name="egg" parent="egg" index="0" unique_id=1880805975]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.12081277, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="egg" unique_id=269129786]

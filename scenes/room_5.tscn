@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://irs5lrps0ovi" path="res://scenes/room_template.tscn" id="1_coxy2"]
 [ext_resource type="PackedScene" uid="uid://c5iewalxbix0w" path="res://scenes/room_6.tscn" id="2_2whii"]
+[ext_resource type="Texture2D" uid="uid://c6xlvp2ys3jua" path="res://textures/room5.png" id="3_hbosg"]
 [ext_resource type="PackedScene" uid="uid://d0fmfxvvtxnax" path="res://assets/models/animals/animal-fox.glb" id="3_xnd4n"]
 [ext_resource type="PackedScene" uid="uid://drqkro5xp35ic" path="res://assets/models/animals/animal-cat.glb" id="4_1bs8n"]
 [ext_resource type="PackedScene" uid="uid://bv2ti1iq672cs" path="res://assets/models/animals/animal-chick.glb" id="5_sn1g8"]
@@ -24,6 +25,7 @@ size = Vector3(0.42382813, 0.5078125, 0.49438477)
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_coxy2")]
 next_scene = ExtResource("2_2whii")
+colormap = ExtResource("3_hbosg")
 
 [node name="animal-fox2" parent="." unique_id=1733254123 instance=ExtResource("3_xnd4n")]
 transform = Transform3D(-0.6653991, 0, -0.7464879, -0.40492374, 0.8400956, 0.36093804, 0.6271212, 0.54243845, -0.5589988, -3.35019, 12.005642, 2.2735815)
@@ -31,7 +33,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 12.0
 
-[node name="animal-fox" parent="animal-fox2" index="0" unique_id=2055341553]
+[node name="animal-fox" parent="animal-fox2" index="0" unique_id=832219164]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.255, 0.07)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-fox2" unique_id=1822784453]
@@ -43,7 +45,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 12.0
 
-[node name="animal-cat" parent="animal-cat2" index="0" unique_id=908218894]
+[node name="animal-cat" parent="animal-cat2" index="0" unique_id=82449462]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.2603035, 0.04988742)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-cat2" unique_id=1932437375]
@@ -55,10 +57,10 @@ collision_layer = 4
 collision_mask = 15
 mass = 3.0
 
-[node name="animal-chick" parent="animal-chick2" index="0" unique_id=804460225]
+[node name="animal-chick" parent="animal-chick2" index="0" unique_id=859609569]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
-[node name="root" parent="animal-chick2/animal-chick" index="0" unique_id=1100679343]
+[node name="root" parent="animal-chick2/animal-chick" index="0" unique_id=483060841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7807355, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-chick2" unique_id=13123612]
@@ -71,16 +73,16 @@ collision_layer = 4
 collision_mask = 15
 mass = 167.0
 
-[node name="animal-elephant" parent="animal-elephant2" index="0" unique_id=1814870451]
+[node name="animal-elephant" parent="animal-elephant2" index="0" unique_id=1634855802]
 transform = Transform3D(0.9944878, -0.10477592, -0.003910899, 0.10477592, 0.9917127, 0.074343845, -0.003911078, -0.074343845, 0.9972248, -0.13080812, -0.71632385, -0.19121909)
 
-[node name="root" parent="animal-elephant2/animal-elephant" index="0" unique_id=7444885]
+[node name="root" parent="animal-elephant2/animal-elephant" index="0" unique_id=692897921]
 transform = Transform3D(1, 1.3995134e-09, -2.9802322e-08, 4.916714e-09, 1, 8.69278e-10, -2.9802322e-08, 7.525081e-09, 1, 0.062274456, -0.009891987, 0.04418683)
 
-[node name="body" parent="animal-elephant2/animal-elephant/root" index="0" unique_id=1498942500]
+[node name="body" parent="animal-elephant2/animal-elephant/root" index="0" unique_id=452463232]
 transform = Transform3D(0.9824088, 0.17322516, 0.069756456, -0.17364816, 0.9848077, -4.656613e-10, -0.0686967, -0.01211308, 0.9975641, 1.573182e-08, 0.18124998, -3.8083503e-08)
 
-[node name="tail" parent="animal-elephant2/animal-elephant/root/body" index="0" unique_id=584018568]
+[node name="tail" parent="animal-elephant2/animal-elephant/root/body" index="0" unique_id=1410766006]
 transform = Transform3D(0.9396926, -0.34202015, 0, 0.34202015, 0.9396926, 0, 0, 0, 1, 0, 0.46311063, 0.625)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-elephant2" unique_id=221631072]
@@ -93,7 +95,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 11.0
 
-[node name="root" parent="animal-koala2/animal-koala" parent_id_path=PackedInt32Array(708105075, 162761457) index="0" unique_id=208015988]
+[node name="root" parent="animal-koala2/animal-koala" parent_id_path=PackedInt32Array(708105075, 787276041) index="0" unique_id=713862991]
 transform = Transform3D(0.4, 0, 0, -1.7763565e-16, 0.4, 1.7763568e-15, 0, 4.440892e-16, 0.4, 0, -0.2885299, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="animal-koala2" unique_id=1667247510]
@@ -106,7 +108,7 @@ collision_layer = 4
 collision_mask = 15
 mass = 13.0
 
-[node name="root" parent="animal-dog2/animal-dog" parent_id_path=PackedInt32Array(1142120, 972164320) index="0" unique_id=2101311164]
+[node name="root" parent="animal-dog2/animal-dog" parent_id_path=PackedInt32Array(1142120, 194058755) index="0" unique_id=2464501]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.2637998, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="animal-dog2" unique_id=1003165028]

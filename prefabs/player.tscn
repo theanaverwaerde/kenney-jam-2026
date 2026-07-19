@@ -9,7 +9,7 @@ radius = 0.19335938
 height = 0.6586914
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6kt4"]
-size = Vector3(0.6, 0.2, 0.6)
+size = Vector3(0.6, 10, 0.6)
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_4dohe"]
 filter_enabled = true
@@ -105,8 +105,10 @@ debug_shape_custom_color = Color(7.70092e-07, 0.86415935, 0.1219547, 1)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="character-employee2/character-employee" parent_id_path=PackedInt32Array(1475560683, 2116129900) index="0" unique_id=242047915]
-bones/4/rotation = Quaternion(0, 0, -0.38268346, 0.9238795)
-bones/5/rotation = Quaternion(0, 0, 0.38268346, 0.9238795)
+bones/3/rotation = Quaternion(-0.030508425, 0, 0, 0.9995345)
+bones/4/rotation = Quaternion(0, 0, -0.3099606, 0.9507494)
+bones/5/rotation = Quaternion(0, 0, 0.3099606, 0.9507494)
+bones/6/rotation = Quaternion(0, 0.030508425, 0, 0.9995345)
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=318179094]
 root_node = NodePath("../character-employee2")
