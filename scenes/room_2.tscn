@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bsusnl5qmjclo" path="res://assets/models/food/pepper.glb" id="8_hbe2o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lg67w"]
-radius = 0.09765625
-height = 0.21777344
+radius = 0.119628906
+height = 0.296875
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lg67w"]
 radius = 0.11608292
@@ -29,8 +29,8 @@ height = 0.3203125
 radius = 0.17773438
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_25rsy"]
-radius = 0.064453125
-height = 0.44335938
+radius = 0.091796875
+height = 0.51464844
 
 [node name="Node" type="Node" unique_id=144643641]
 
@@ -38,12 +38,14 @@ height = 0.44335938
 next_scene = ExtResource("2_w0ydv")
 
 [node name="egg" parent="." unique_id=588350752 instance=ExtResource("3_4et86")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.3237772, 0.5783267, 2.1421854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3237772, 0.5783267, 2.1421854)
 collision_layer = 4
 collision_mask = 15
 
+[node name="egg" parent="egg" index="0" unique_id=1880805975]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.12081277, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="egg" unique_id=1371433984]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0817492, 0)
 shape = SubResource("CapsuleShape3D_lg67w")
 
 [node name="apple" parent="." unique_id=525039790 instance=ExtResource("4_ktm03")]
@@ -87,12 +89,16 @@ transform = Transform3D(0.23067412, 0, 0.9730313, 0, 1, 0, -0.9730313, 0, 0.2306
 shape = SubResource("CylinderShape3D_4mlkt")
 
 [node name="pepper2" parent="." unique_id=1541059244 instance=ExtResource("8_hbe2o")]
-transform = Transform3D(0.0031737005, 0, 1.4999967, 0, 1.5, 0, -1.4999967, 0, 0.0031737005, 1.8962244, 1.1657679, -3.6993005)
+transform = Transform3D(0.0021158003, 0, 0.99999774, 0, 1, 0, -0.99999774, 0, 0.0021158003, 1.8962244, 1.1657679, -3.6993005)
 collision_layer = 4
 collision_mask = 15
 
+[node name="pepper" parent="pepper2" index="0" unique_id=1355799794]
+transform = Transform3D(1.5000001, 0, -2.3283064e-10, 0, 1.5, 0, 2.3283064e-10, 0, 1.5000001, 0, -0.065197945, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pepper2" unique_id=536989591]
-transform = Transform3D(0.9952273, -0.097561605, -0.002090161, -0.002100184, -4.3404334e-08, -0.9999978, 0.09756139, 0.9952295, -0.00020494053, 0, 0, 0)
+transform = Transform3D(0.99523616, -0.09756188, -0.0020902304, -0.002100184, -4.3404334e-08, -0.9999978, 0.09756166, 0.99523836, -0.00020494199, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_25rsy")
 
 [editable path="egg"]
+[editable path="pepper2"]

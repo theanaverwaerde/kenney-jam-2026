@@ -9,74 +9,92 @@
 [ext_resource type="PackedScene" uid="uid://boi7wk0mgv2qr" path="res://assets/models/food/apple.glb" id="7_1bltn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bg4i0"]
-radius = 0.067871094
-height = 0.20703125
+radius = 0.27490234
+height = 0.7685547
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lg67w"]
-radius = 0.11279297
-height = 0.8701172
+radius = 0.339
+height = 2.086914
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6w2ej"]
-radius = 0.12916923
+radius = 0.26107982
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_1bltn"]
-height = 0.3154297
-radius = 0.19873047
+height = 0.21289063
+radius = 0.17138672
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_y78up"]
-radius = 0.11608292
+radius = 0.5099506
 
 [node name="Node" type="Node" unique_id=144643641]
 
 [node name="RoomBase" parent="." unique_id=1522547058 instance=ExtResource("1_1nud3")]
 next_scene = ExtResource("2_pmnxm")
 
-[node name="egg" parent="RoomBase" unique_id=719900257 instance=ExtResource("3_rjoje")]
-transform = Transform3D(3.8161519, 1.1987433, 0, -1.1987433, 3.8161519, 0, 0, 0, 4, -2.336917, 5.894729, 0.9845395)
+[node name="egg" parent="." unique_id=719900257 instance=ExtResource("3_rjoje")]
+transform = Transform3D(0.95403796, 0.29968584, 0, -0.29968584, 0.95403796, 0, 0, 0, 1, -2.336917, 5.894729, 0.9845395)
 collision_layer = 4
 collision_mask = 15
 mass = 80.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomBase/egg" unique_id=940195754]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08174917, 0)
+[node name="egg" parent="egg" index="0" unique_id=1880805975]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 7.450581e-09, -0.33070824, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="egg" unique_id=940195754]
 shape = SubResource("CapsuleShape3D_bg4i0")
 
-[node name="banana2" parent="RoomBase" unique_id=1033875212 instance=ExtResource("4_bg4i0")]
-transform = Transform3D(-0.110408925, 1.9628783, -2.2660358, 1.5054898, 1.9972272, 1.6566789, 2.5925486, -1.076194, -1.0585351, 3.62389, 3.568469, -3.78819)
+[node name="banana2" parent="." unique_id=1033875212 instance=ExtResource("4_bg4i0")]
+transform = Transform3D(-0.036802888, 0.6542927, -0.75534534, 0.50183, 0.6657423, 0.55222625, 0.86418295, -0.35873145, -0.35284495, 3.62389, 3.568469, -3.78819)
 collision_layer = 4
 collision_mask = 15
 mass = 80.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomBase/banana2" unique_id=49216074]
-transform = Transform3D(0.99763167, 0.048666213, -0.04860797, -0.048665635, -4.371139e-08, -0.9988151, -0.04860797, 0.9988151, 0.0023682644, -0.0045981407, 0.11650774, 0.00022411346)
+[node name="banana" parent="banana2" index="0" unique_id=1501744612]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.1175871e-08, -0.36905771, -2.7939677e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="banana2" unique_id=49216074]
+transform = Transform3D(0.99763167, 0.04866615, -0.048608243, -0.04866582, -1.5646219e-07, -0.99881506, -0.048607796, 0.9988145, 0.0023682863, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_lg67w")
 
-[node name="pear2" parent="RoomBase" unique_id=1683768581 instance=ExtResource("5_6w2ej")]
-transform = Transform3D(1.8222901, -0.47116083, -0.67621464, 0, 1.640956, -1.1433562, 0.82417154, 1.0417633, 1.4951489, -4.5272923, 0.4126837, -3.4254282)
+[node name="pear2" parent="." unique_id=1683768581 instance=ExtResource("5_6w2ej")]
+transform = Transform3D(0.9111451, -0.23558038, -0.33810732, 0, 0.820478, -0.57167804, 0.41208577, 0.52088165, 0.7475745, -4.5272923, 0.4126837, -3.4254282)
 collision_layer = 4
 collision_mask = 15
 mass = 18.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomBase/pear2" unique_id=21869220]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.123288095, 0)
+[node name="pear" parent="pear2" index="0" unique_id=205824649]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.7252903e-09, -0.24922517, 7.450581e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pear2" unique_id=21869220]
 shape = SubResource("SphereShape3D_6w2ej")
 
-[node name="burger2" parent="RoomBase" unique_id=1103753178 instance=ExtResource("6_yvqia")]
-transform = Transform3D(0.54668707, -0.14134826, -0.2028644, 0, 0.49228683, -0.34300688, 0.24725147, 0.312529, 0.44854468, -0.6054585, 0.97838295, -2.4350915)
+[node name="burger2" parent="." unique_id=1103753178 instance=ExtResource("6_yvqia")]
+transform = Transform3D(0.9111451, -0.23558037, -0.33810735, 0, 0.8204781, -0.571678, 0.41208577, 0.5208816, 0.74757457, -0.6054585, 0.97838295, -2.4350915)
 collision_layer = 4
 collision_mask = 15
 mass = 2.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomBase/burger2" unique_id=2023142492]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13778204, 0)
+[node name="burger" parent="burger2" index="0" unique_id=1461758784]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 1.9557775e-09, -0.07449858, -2.7939677e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="burger2" unique_id=2023142492]
+transform = Transform3D(1, -1.4901161e-08, 0, -5.9604645e-08, 1, 0, -5.9604645e-08, -2.9802322e-08, 1.0000001, 0, 0, 0)
 shape = SubResource("CylinderShape3D_1bltn")
 
-[node name="apple" parent="RoomBase" unique_id=1194240065 instance=ExtResource("7_1bltn")]
-transform = Transform3D(-3.3903909, 1.9424657, 2.787847, -2.9802322e-07, 3.9382997, -2.7440596, -3.3978317, -1.9382138, -2.781742, 2.9295087, 1.914287, -1.5539529)
+[node name="apple" parent="." unique_id=1194240065 instance=ExtResource("7_1bltn")]
+transform = Transform3D(-0.70633125, 0.40468007, 0.58080137, -6.2088155e-08, 0.8204782, -0.5716778, -0.70788145, -0.40379393, -0.57952935, 2.9295087, 1.914287, -1.5539529)
 collision_layer = 4
 collision_mask = 15
 mass = 150.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomBase/apple" unique_id=1177401278]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08243373, 0)
+[node name="apple" parent="apple" index="0" unique_id=140223063]
+transform = Transform3D(4.8, 0, 0, 0, 4.8, 0, 0, 0, 4.8, 1.3411046e-08, -0.42457932, -6.705523e-09)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="apple" unique_id=1177401278]
 shape = SubResource("SphereShape3D_y78up")
+
+[editable path="egg"]
+[editable path="banana2"]
+[editable path="pear2"]
+[editable path="burger2"]
+[editable path="apple"]
