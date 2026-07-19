@@ -6,6 +6,11 @@ Assets used:
 - [Godot-SplashScreens](https://github.com/KenneyNL/Godot-SplashScreens) *pride-light-c*
 - [Skyboxes](https://kenney.nl/assets/skyboxes) *skybox-night*
 - [Mini Market](https://kenney.nl/assets/mini-market)
+- [Food Kit](https://kenney.nl/assets/food-kit)
+- [Car Kit](https://kenney.nl/assets/car-kit)
+- [Cube Pets](https://kenney.nl/assets/cube-pets)
+- [Watercraft Kit](https://kenney.nl/assets/watercraft-kit)
+- [Train Kit](https://kenney.nl/assets/train-kit)
 - [UI Pack](https://kenney.nl/assets/ui-pack)
 - [Input Prompts](https://kenney.nl/assets/input-prompts)
 - [Space Station Kit](https://kenney.nl/assets/space-station-kit)
