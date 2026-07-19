@@ -10,15 +10,15 @@ config_version=5
 
 [application]
 
-config/name="KenneyJam2026"
+config/name="SMSMSG2 DX"
 run/main_scene="uid://dvi2sd8k4ut1o"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/stretch_mode=4
 boot_splash/image="uid://o45lstfevt71"
-config/icon="res://icon.svg"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
