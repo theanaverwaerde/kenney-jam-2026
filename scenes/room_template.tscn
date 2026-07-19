@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://jsbi1sfqh3d" path="res://prefabs/scale.tscn" id="6_bhtnt"]
 [ext_resource type="PackedScene" uid="uid://b3kektkoipswh" path="res://prefabs/display.tscn" id="9_bk54u"]
 [ext_resource type="PackedScene" uid="uid://dbijw6vnaufno" path="res://assets/models/column.glb" id="10_qre4e"]
+[ext_resource type="PackedScene" uid="uid://bgctm3ijf4wcb" path="res://assets/models/shelf-boxes.glb" id="11_75hf8"]
+[ext_resource type="PackedScene" uid="uid://c07j24hti6tl" path="res://assets/models/shelf-end.glb" id="12_iwxm8"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_els8b"]
 
@@ -119,6 +121,56 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2762729, 4.947257)
 light_energy = 6.0
 shadow_enabled = true
+
+[node name="Deco" type="Node" parent="." unique_id=1958965905]
+
+[node name="shelf-boxes2" parent="Deco" unique_id=304276526 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 2.8489304)
+
+[node name="shelf-boxes3" parent="Deco" unique_id=1654398932 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 1.6489303)
+
+[node name="shelf-boxes4" parent="Deco" unique_id=1805323690 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 0.44893026)
+
+[node name="shelf-boxes5" parent="Deco" unique_id=1579986525 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -0.7510698)
+
+[node name="shelf-boxes6" parent="Deco" unique_id=1272157915 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -1.9510698)
+
+[node name="shelf-boxes7" parent="Deco" unique_id=1883854961 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -3.0510697)
+
+[node name="shelf-boxes8" parent="Deco" unique_id=963919885 instance=ExtResource("11_75hf8")]
+transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -4.25107)
+
+[node name="shelf-boxes9" parent="Deco" unique_id=1476465661 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.749466, -9.903312e-05, -4.293927)
+
+[node name="shelf-boxes10" parent="Deco" unique_id=1836484250 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -3.093927)
+
+[node name="shelf-boxes11" parent="Deco" unique_id=497659054 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -1.8939269)
+
+[node name="shelf-boxes12" parent="Deco" unique_id=993536704 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -0.6939268)
+
+[node name="shelf-boxes13" parent="Deco" unique_id=1657266652 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, 0.50607324)
+
+[node name="shelf-boxes14" parent="Deco" unique_id=1469788660 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, 1.606073)
+
+[node name="shelf-boxes15" parent="Deco" unique_id=621068171 instance=ExtResource("11_75hf8")]
+transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.749467, -9.903312e-05, 2.8060732)
+
+[node name="shelf-end2" parent="Deco" unique_id=2071299024 instance=ExtResource("12_iwxm8")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.4592733, 1.6653345e-16, 3.1675816)
+
+[node name="shelf-end3" parent="Deco" unique_id=584456607 instance=ExtResource("12_iwxm8")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.518792, 1.6653345e-16, 3.1675816)
 
 [connection signal="submit_mass" from="ScaleLeft" to="DisplayLeft" method="_on_submit_mass"]
 [connection signal="submit_mass" from="ScaleRight" to="DisplayRight" method="_on_submit_mass"]

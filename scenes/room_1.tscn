@@ -5,9 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://41bbtqlcjvkk" path="res://prefabs/objects/apple_basket.tscn" id="2_xhekj"]
 [ext_resource type="PackedScene" uid="uid://cdjm33l862uix" path="res://prefabs/objects/bag.tscn" id="3_irjyx"]
 [ext_resource type="PackedScene" uid="uid://ddi840qy0dqhx" path="res://prefabs/objects/bread.tscn" id="4_0akh5"]
-[ext_resource type="PackedScene" uid="uid://bgctm3ijf4wcb" path="res://assets/models/shelf-boxes.glb" id="6_0akh5"]
 [ext_resource type="PackedScene" uid="uid://ctel6vinta4fw" path="res://prefabs/objects/box.tscn" id="7_d0u7m"]
-[ext_resource type="PackedScene" uid="uid://c07j24hti6tl" path="res://assets/models/shelf-end.glb" id="8_3wwl0"]
 
 [node name="Room1" type="Node" unique_id=1860400475]
 
@@ -27,56 +25,8 @@ mass = 20.0
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.7499677, 0, 1.2003003)
 mass = 20.0
 
-[node name="shelf-boxes2" parent="." unique_id=1339036653 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 2.8489304)
-
-[node name="shelf-boxes3" parent="." unique_id=1655480805 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 1.6489303)
-
-[node name="shelf-boxes4" parent="." unique_id=1485189983 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, 0.44893026)
-
-[node name="shelf-boxes5" parent="." unique_id=511795123 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -0.7510698)
-
-[node name="shelf-boxes6" parent="." unique_id=1569086217 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -1.9510698)
-
-[node name="shelf-boxes7" parent="." unique_id=76818346 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -3.0510697)
-
-[node name="shelf-boxes8" parent="." unique_id=100408932 instance=ExtResource("6_0akh5")]
-transform = Transform3D(0.01450444, 0, -0.9998948, 0, 1, 0, 0.9998948, 0, 0.01450444, 5.712899, -9.903312e-05, -4.25107)
-
-[node name="shelf-boxes9" parent="." unique_id=1721788403 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.749466, -9.903312e-05, -4.293927)
-
-[node name="shelf-boxes10" parent="." unique_id=2062477396 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -3.093927)
-
-[node name="shelf-boxes11" parent="." unique_id=2116437565 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -1.8939269)
-
-[node name="shelf-boxes12" parent="." unique_id=1969161602 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, -0.6939268)
-
-[node name="shelf-boxes13" parent="." unique_id=566284691 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, 0.50607324)
-
-[node name="shelf-boxes14" parent="." unique_id=351173422 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.7494664, -9.903312e-05, 1.606073)
-
-[node name="shelf-boxes15" parent="." unique_id=635375477 instance=ExtResource("6_0akh5")]
-transform = Transform3D(-0.014504353, 0, 0.9998948, 0, 1, 0, -0.9998948, 0, -0.014504353, -5.749467, -9.903312e-05, 2.8060732)
-
 [node name="box2" parent="." unique_id=1066030251 instance=ExtResource("7_d0u7m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1144035, 0, -0.76605725)
 collision_layer = 4
 collision_mask = 15
 mass = 10.0
-
-[node name="shelf-end2" parent="." unique_id=981664194 instance=ExtResource("8_3wwl0")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.4592733, 1.6653345e-16, 3.1675816)
-
-[node name="shelf-end3" parent="." unique_id=1991324059 instance=ExtResource("8_3wwl0")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.518792, 1.6653345e-16, 3.1675816)
